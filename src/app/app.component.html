@@ -1,1 +1,9 @@
-This is the app component
+<div class="button-row">
+<button md-button [mdMenuTriggerFor]="menu">Menu</button>
+<md-menu [overlapTrigger]="false" #menu="mdMenu">
+  <button role="link" md-menu-item  routerLink="workers/list">Workers List</button>
+  <button role="link" md-menu-item routerLink="workers/add-worker">Add Worker</button>
+</md-menu>
+<button md-button>lists</button>
+</div>
+<router-outlet></router-outlet>

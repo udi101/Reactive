@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary,
+.mat-raised-button.mat-primary {
+  background: linear-gradient(#6080a0, #204090);
+  color: #fff;
+}
+
+.mat-toolbar {
+  background: linear-gradient(#6080a0, #204090);
+  font-family: lato;
+  color:#fff;
+  font-size: 16px;
+  a {
+    margin: 0 25px 0 0;
+    &:hover {
+      color: #ffd740;
+      cursor: pointer;
+    }
+  }
+}

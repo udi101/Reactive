@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.button-row{
+    font-family: lato;
+    background:#f0f0f0;
+    display:flex;
+    justify-content: flex-start;
+}
+button{
+    margin-right: 10px;
+    font-family: lato;
+    font-size:14px;
+}
