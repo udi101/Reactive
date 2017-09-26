@@ -1,6 +1,33 @@
 <div class="row" style="font-family: lato">
-    <div class="col-xs-6" style="margin:30px 0 12px 0">
-      <strong>Add Worker</strong> 
-      <hr style="border: 1px solid #a0a0a0">
-    </div>
+  <div class="col-xs-6" style="margin:30px 0 12px 0">
+    <strong>Add Worker</strong>
+    <hr style="border: 1px solid #a0a0a0">
   </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-6">
+    <form [formGroup]="workersForm">
+      <fieldset>
+        <div style="display: flex; flex-direction: column">
+          <div style="display: flex; flex-flow: row wrap">
+            <md-form-field style="margin-right: 100px">
+              <input type="text" role="textbox" mdInput placeholder="First name" formControlName="firstName">
+            </md-form-field>
+            <md-form-field>
+              <input mdInput type="text" placeholder="last name" tabindex="0" formControlName="lastName">
+            </md-form-field>
+          </div>
+          <md-form-field>
+            <input mdInput placeholder="Salary" type="number" formControlName="salary">
+          </md-form-field>
+        </div>
+        <div>
+          <button md-raised-button color="primary" (click)="setValues()">Set Values</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+Values of the form: {{workersForm?.value | json }} {{workersForm.get('firstName').valid}}

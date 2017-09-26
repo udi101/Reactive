@@ -1,9 +1,10 @@
+@import './../../../variables.scss';
 table {
   font-family: lato;
   border-collapse: collapse;
   thead{
     color:white;
-    background: linear-gradient(#6080a0,#204090);
+    background: linear-gradient(lighten($mainColor,10%),darken($mainColor, 10%));
   }
   tr:hover {
     background-color: #e0e0e0;

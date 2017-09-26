@@ -1,17 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "./variables.scss";
 .mat-fab.mat-primary,
 .mat-mini-fab.mat-primary,
 .mat-raised-button.mat-primary {
-  background: linear-gradient(#6080a0, #204090);
+  background: linear-gradient(lighten($mainColor,0.9),$mainColor );
+  // background: linear-gradient(#6080a0, #204090);
   color: #fff;
 }
 
 .mat-toolbar {
-  background: linear-gradient(#6080a0, #204090);
+  // background: linear-gradient(#6080a0, #204090);
+  background: linear-gradient(lighten($mainColor,0.9),$mainColor );
   font-family: lato;
-  color:#fff;
+  color: #fff;
   font-size: 16px;
   a {
     margin: 0 25px 0 0;
@@ -20,4 +23,12 @@
       cursor: pointer;
     }
   }
+}
+
+.mat-focused .mat-form-field-placeholder {
+  color: $mainColor;
+}
+
+.mat-form-field-ripple {
+  background-color: $mainColor;
 }

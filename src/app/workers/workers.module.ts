@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule, MatInputModule } from '@angular/material';
 
 
 // Components
@@ -15,11 +16,13 @@ import { AddWorkerComponent } from './add-worker/add-worker.component';
 @NgModule({
     imports: [
         CommonModule,
+        ReactiveFormsModule,
         HttpModule,
         MdTableModule,
         MdButtonModule,
         MdToolbarModule,
         MdMenuModule,
+        MatInputModule,
         RouterModule.forChild([
             { path: 'list', component: ListComponent },
             { path: 'add-worker', component: AddWorkerComponent }
