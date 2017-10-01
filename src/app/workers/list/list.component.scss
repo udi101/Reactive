@@ -2,9 +2,9 @@
 table {
   font-family: lato;
   border-collapse: collapse;
-  thead{
-    color:white;
-    background: linear-gradient(lighten($mainColor,10%),darken($mainColor, 10%));
+  thead {
+    color: white;
+    background: linear-gradient(lighten($mainColor, 10%), darken($mainColor, 10%));
   }
   tr:hover {
     background-color: #e0e0e0;
@@ -17,4 +17,10 @@ table {
 
 .odd {
   background-color: #f5f5f5;
+}
+
+@media screen and (max-width : 992px) {
+  td{
+    color:red;
+  }
 }

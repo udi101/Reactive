@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { IWorker } from './../worker.interface';
-import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-add-worker',
@@ -15,19 +15,15 @@ export class AddWorkerComponent implements OnInit {
 
   ngOnInit() {
     this.workersForm = this.formBuildier.group({
-      firstName: '',
+      firstName: ['', [Validators.required, Validators.minLength(3)]],
       lastName: '',
-      salary: [{ value: null, disabled: true }]
+      notification: 'email',
+      salary: [{ value: null, disabled: false }]
     });
-    // this.workersForm = new FormGroup({
-    //   firstName: new FormControl(),
-    //   lastName: new FormControl(),
-    //   salary: new FormControl()
-    // });
   }
 
   setValues() {
-    this.workersForm.setValue({
+    this.workersForm.patchValue({
       firstName: 'Udi',
       lastName: 'Mazor',
       salary: 25000
@@ -35,5 +31,9 @@ export class AddWorkerComponent implements OnInit {
   }
   save() {
     // console.log('Saved: ' + this.workersForm);
+  }
+
+  submit() {
+    console.log(this.workersForm.value);
   }
 }

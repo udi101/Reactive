@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule, MatInputModule } from '@angular/material';
+import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule, MatInputModule, MdRadioModule } from '@angular/material';
 
 
 // Components
@@ -21,6 +21,7 @@ import { AddWorkerComponent } from './add-worker/add-worker.component';
         MdTableModule,
         MdButtonModule,
         MdToolbarModule,
+        MdRadioModule,
         MdMenuModule,
         MatInputModule,
         RouterModule.forChild([
