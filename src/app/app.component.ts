@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+  private sampleScreenWidth = _.debounce((event) => this.checkWidth(event), 70, {});
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.sampleScreenWidth(event);
+  }
+  checkWidth(event): void {
+    console.log(event.target.innerWidth);
+    console.log('The max available width is: ' + screen.availWidth);
+  }
 }

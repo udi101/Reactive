@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Sharedodule } from './../shared/shared.module';
 import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule, MatInputModule, MdRadioModule } from '@angular/material';
 
 
@@ -11,11 +12,13 @@ import { ListComponent } from './list/list.component';
 import { WorkersService } from './workers.service';
 import { OrderbyPipe } from './pipes/orderby.pipe';
 import { AddWorkerComponent } from './add-worker/add-worker.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
     imports: [
         CommonModule,
+        Sharedodule,
         ReactiveFormsModule,
         HttpModule,
         MdTableModule,
@@ -26,11 +29,12 @@ import { AddWorkerComponent } from './add-worker/add-worker.component';
         MatInputModule,
         RouterModule.forChild([
             { path: 'list', component: ListComponent },
-            { path: 'add-worker', component: AddWorkerComponent }
+            { path: 'add-worker', component: AddWorkerComponent },
+            { path: 'layout', component: LayoutComponent }
         ])
     ],
     exports: [],
-    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent],
+    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, LayoutComponent],
     providers: [WorkersService]
 })
 export class WorkersModule {

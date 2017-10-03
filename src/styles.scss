@@ -36,3 +36,31 @@
 body{
   margin:0;
 }
+
+div.container{
+  display:flex;
+  flex-flow: column nowrap;
+  margin:0 10px;
+  justify-content: flex-start;
+}
+
+.row{
+  display:flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-Width:919px) {
+  .hidden-md{
+    display: flex !important;
+    flex:1 0 100%;
+  }
+}
+
+@media screen and (min-Width:920px) {
+  .hidden-md{
+    display: none !important;
+  }
+}

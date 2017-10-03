@@ -8,9 +8,10 @@ import { MdToolbarModule, MdMenuModule, MdButtonModule } from '@angular/material
 // Components
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
 
   ],
   imports: [
