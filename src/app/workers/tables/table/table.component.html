@@ -1,8 +1,5 @@
-<div class="container">
-  <div class="row">
-    This is table data
-  </div>
-  <div class="row">
+
+
     <table border="1" style="border-collapse: collapse">
       <thead>
         <tr>
@@ -11,11 +8,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of data">
+        <tr *ngFor="let item of data; let odd=odd" [class.odd]="odd">
           <td>{{item.firstName}}</td>
           <td>{{item.lastName}}</td>
         </tr>
       </tbody>
     </table>
-  </div>
-</div>

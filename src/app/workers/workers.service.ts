@@ -12,9 +12,9 @@ export class WorkersService {
     workers$ = this.workers.asObservable();
 
     constructor(private http: Http) { }
-    getWorkers() {
-        ((x, y) => { setTimeout(() => { x.next(y); }, 1000); })(this.workers, workers);
-    }
+    // getWorkers() {
+    //     ((x, y) => { setTimeout(() => { x.next(y); }, 1000); })(this.workers, workers);
+    // }
 
 
     readWorkers() {
@@ -24,19 +24,19 @@ export class WorkersService {
 }
 
 
-const workers: Array<IWorker> = [
-    {
-        firstName: 'Udi', lastName: 'Mazor', salary: 25000, birthDate: new Date('1974-08-28 12:00:00'),
-        address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
-    },
-    {
-        firstName: 'Mazal', lastName: 'Mazor', salary: 24000, birthDate: new Date('1985-04-04 12:00:00'),
-        address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
-    },
-    {
-        firstName: 'Liat', lastName: 'Levi', salary: 12000, birthDate: new Date('1995-08-12 12:00:00'),
-        address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 49 }
-    }
-];
+// const workers: Array<IWorker> = [
+//     {
+//         firstName: 'Udi', lastName: 'Mazor', salary: 25000, birthDate: new Date('1974-08-28 12:00:00'),
+//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
+//     },
+//     {
+//         firstName: 'Mazal', lastName: 'Mazor', salary: 24000, birthDate: new Date('1985-04-04 12:00:00'),
+//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
+//     },
+//     {
+//         firstName: 'Liat', lastName: 'Levi', salary: 12000, birthDate: new Date('1995-08-12 12:00:00'),
+//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 49 }
+//     }
+// ];
 
 
