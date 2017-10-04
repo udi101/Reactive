@@ -2,18 +2,20 @@
 
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "./variables.scss";
+body {
+  font-family: lato;
+}
 
 .mat-fab.mat-primary,
 .mat-mini-fab.mat-primary,
 .mat-raised-button.mat-primary {
-  background: linear-gradient(lighten($mainColor,0.9),$mainColor );
-  // background: linear-gradient(#6080a0, #204090);
+  background: linear-gradient(lighten($mainColor, 0.9), $mainColor); // background: linear-gradient(#6080a0, #204090);
   color: #fff;
 }
 
 .mat-toolbar {
   // background: linear-gradient(#6080a0, #204090);
-  background: linear-gradient(lighten($mainColor,0.9),$mainColor );
+  background: linear-gradient(lighten($mainColor, 0.9), $mainColor);
   font-family: lato;
   color: #fff;
   font-size: 16px;
@@ -33,34 +35,34 @@
 .mat-form-field-ripple {
   background-color: $mainColor;
 }
-body{
-  margin:0;
+
+body {
+  margin: 0;
 }
 
-div.container{
-  display:flex;
+div.container {
+  display: flex;
   flex-flow: column nowrap;
-  margin:0 10px;
+  margin: 0 10px;
   justify-content: flex-start;
 }
 
-.row{
-  display:flex;
+.row {
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
-
 @media screen and (max-Width:919px) {
-  .hidden-md{
+  .hidden-md {
     display: flex !important;
-    flex:1 0 100%;
+    flex: 1 0 100%;
   }
 }
 
 @media screen and (min-Width:920px) {
-  .hidden-md{
+  .hidden-md {
     display: none !important;
   }
 }

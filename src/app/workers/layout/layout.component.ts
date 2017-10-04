@@ -1,20 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit, AfterViewInit, OnDestroy, ComponentFactoryResolver, ViewChild } from '@angular/core';
+import { AdDirective } from './../../shared/directives/ad.directive';
+import { TableItem } from './../tables/table-item.interface';
+import { TableService } from './../tables/getTables.service';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent implements OnInit {
+export class LayoutComponent implements OnInit, OnDestroy {
+  @Input() tableItem: TableItem;
+  @ViewChild(AdDirective) tableHost: AdDirective;
 
-  constructor() { }
+  constructor(private tableService: TableService, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      console.log('I am a mobile device');
-    } else {
-      console.log('desktop');
-    }
+    this.tableItem = this.tableService.getTable();
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.tableItem.component);
+    const viewContainerRef = this.tableHost.viewContainerRef;
+    console.log(this.tableItem.component);
+    const componentRef = viewContainerRef.createComponent(componentFactory);
+    (<TableItem>componentRef.instance).data = this.tableItem.data;
   }
+  ngOnDestroy() { }
 
 }

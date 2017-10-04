@@ -7,12 +7,13 @@
   </div>
 
   <div style="display: flex">
-    <div style="flex: 0 0 800px">
+    <div class="row">
       <table border="1">
         <thead>
           <th>First name</th>
           <th>Last name</th>
           <th>Salary</th>
+          <th>Email</th>
           <th>Birth date</th>
           <th>City</th>
           <th>Street</th>
@@ -23,6 +24,7 @@
             <td>{{worker?.firstName}}</td>
             <td>{{worker?.lastName}}</td>
             <td>₪ {{worker?.salary | number}}</td>
+            <td>{{worker?.email}}</td>
             <td>{{worker?.birthDate| date:'dd/MM/yyyy'}}</td>
             <td>{{worker.address.city}}</td>
             <td>{{worker.address.building}}</td>

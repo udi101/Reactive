@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { IWorker } from './../worker.interface';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+
+function checkSalary(c: AbstractControl): { [key: string]: boolean } | null {
+  if (c.value < 100 && c.value > 50000) {
+    return { 'salary': false };
+  } else { return null; }
+}
 
 @Component({
   selector: 'app-add-worker',
@@ -18,7 +24,7 @@ export class AddWorkerComponent implements OnInit {
       firstName: ['', [Validators.required, Validators.minLength(3)]],
       lastName: '',
       notification: 'email',
-      salary: [{ value: null, disabled: false }]
+      salary: [{ value: null, disabled: false }, checkSalary]
     });
   }
 

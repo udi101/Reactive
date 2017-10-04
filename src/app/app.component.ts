@@ -14,7 +14,6 @@ export class AppComponent {
     this.sampleScreenWidth(event);
   }
   checkWidth(event): void {
-    console.log(event.target.innerWidth);
-    console.log('The max available width is: ' + screen.availWidth);
-  }
+    console.log('Current width: ' + event.target.innerWidth);
+    }
 }

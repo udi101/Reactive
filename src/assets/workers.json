@@ -2,6 +2,7 @@
     "firstName": "Udi",
     "lastName": "Mazor",
     "salary": 25000,
+    "email":"udimaz@gmail.com",
     "birthDate": "1974-08-28 12:00:00",
     "address": {
       "country": "Israel",
@@ -14,6 +15,7 @@
     "firstName": "Mazal",
     "lastName": "Mazor",
     "salary": 24000,
+    "email":"mazalr44@gmail.com",
     "birthDate": "1985-04-04 12:00:00",
     "address": {
       "country": "Israel",
@@ -26,6 +28,7 @@
     "firstName": "Liat",
     "lastName": "Levi",
     "salary": 12000,
+    "email":"liatl5@gmail.com",
     "birthDate": "1995-08-12 12:00:00",
     "address": {
       "country": "Israel",
