@@ -5,7 +5,7 @@ import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from
 function checkSalary(min: number, max: number): ValidatorFn {
   return (c: AbstractControl): { [key: string]: boolean } => {
     if (c.value !== 'undefined' && (isNaN(c.value) || c.value < min || c.value > max)) {
-      return { 'salary': true };
+      return { 'range': true };
     }
     return null;
   };
@@ -27,6 +27,10 @@ export class AddWorkerComponent implements OnInit {
     this.workersForm = this.formBuildier.group({
       firstName: ['', [Validators.required, Validators.minLength(3)]],
       lastName: '',
+      mailConfirmation: this.formBuildier.group({
+        email: [{ value: '', disabled: false }, [Validators.required, Validators.pattern('[a-z0-9A-Z_.]{3,15}@[a-z0-9.]{3,15}')]],
+        confirmEmail: ['', Validators.required]
+      }),
       notification: 'email',
       salary: [{ value: null, disabled: false }, checkSalary(100, 50000)]
     });

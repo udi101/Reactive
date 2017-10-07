@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Sharedodule } from './../shared/shared.module';
 import { TableService } from './tables/getTables.service';
-import { MdTableModule, MdButtonModule, MdToolbarModule, MdMenuModule, MatInputModule, MdRadioModule } from '@angular/material';
+import { MatTableModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatInputModule, MatRadioModule } from '@angular/material';
 
 
 // Components
@@ -24,11 +24,11 @@ import { CardsComponent } from './tables/cards/cards.component';
         Sharedodule,
         ReactiveFormsModule,
         HttpModule,
-        MdTableModule,
-        MdButtonModule,
-        MdToolbarModule,
-        MdRadioModule,
-        MdMenuModule,
+        MatTableModule,
+        MatButtonModule,
+        MatToolbarModule,
+        MatRadioModule,
+        MatMenuModule,
         MatInputModule,
         RouterModule.forChild([
             { path: 'list', component: ListComponent },

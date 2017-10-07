@@ -1,51 +1,56 @@
-<div class="row" style="font-family: lato;">
-  <strong>Add Worker</strong>
-  <hr style="border: 1px solid #a0a0a0">
-</div>
-
-
-<form [formGroup]="workersForm" (ngSubmit)="submit()" novalidate>
-  <div class="container" style="height:300px">
-    <div class="row" style="justify-content: space-between; width:500px">
-      <md-form-field>
-        <input type="text" role="textbox" mdInput placeholder="First name" formControlName="firstName">
-      </md-form-field>
-
-      <md-form-field>
-        <input mdInput type="text" placeholder="last name" tabindex="0" formControlName="lastName">
-      </md-form-field>
-    </div>
-
-    <div class="row">
-      <md-form-field>
-        <input mdInput placeholder="Salary" type="number" formControlName="salary" #salary>
-      </md-form-field>
-    </div>
-
-    <div class="row">
-      <md-form-field>
-        <input mdInput type="text" role="textbox" placeholder="email address">
-      </md-form-field>
-    </div>
-
-    <div class="row">
-      <md-radio-group labelPosition="before" name="udi" formControlName="notification">
-        <md-radio-button value="email" color="primary" style="margin-right:20px">Email</md-radio-button>
-        <md-radio-button value="text" color="primary">Text</md-radio-button>
-      </md-radio-group>
-    </div>
-
-    <div class="row">
-      <button md-raised-button color="primary">Submit Form</button>
-      <button md-raised-button (click)="setValues()">Set Default Values</button>
-    </div>
-
+<div class="container">
+  <div class="row" style="font-family: lato;">
+    <strong>Add Worker</strong>
+    <hr style="border: 1px solid #a0a0a0">
   </div>
-</form>
-<div style="margin-top:30px">
-  Values of the form: {{workersForm?.value | json }}
-  {{workersForm.get('salary').errors | json}}
-</div>
-<div>
-  <ng-template ad-host></ng-template>
+
+
+  <form [formGroup]="workersForm" (ngSubmit)="submit()" novalidate>
+    <div class="container" style="height:420px">
+      <div class="row">
+        <mat-form-field>
+          <input type="text" role="textbox" matInput placeholder="First name" formControlName="firstName">
+        </mat-form-field>
+
+        <mat-form-field>
+          <input matInput type="text" placeholder="last name" tabindex="0" formControlName="lastName">
+        </mat-form-field>
+      </div>
+
+      <div class="row">
+        <mat-form-field>
+          <input matInput placeholder="Salary" type="number" formControlName="salary" #salary>
+        </mat-form-field>
+        <span *ngIf="!!workersForm.get('salary').errors?.range && workersForm.controls.salary.dirty"><small>* The Salary is out of the accepted range</small></span>
+      </div>
+
+      <div formGroupName='mailConfirmation'>
+        <div class="row">
+          <mat-form-field>
+            <input matInput type="text" role="textbox" placeholder="email address" formControlName="email">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="text" placeholder="confirm email" formControlName="confirmEmail">
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="row">
+        <mat-radio-group labelPosition="before" name="udi" formControlName="notification">
+          <mat-radio-button value="email" color="primary" style="margin-right:20px">Email</mat-radio-button>
+          <mat-radio-button value="text" color="primary">Text</mat-radio-button>
+        </mat-radio-group>
+      </div>
+
+      <div class="row">
+        <button mat-raised-button color="primary">Submit Form</button>
+        <button mat-raised-button (click)="setValues()">Set Default Values</button>
+      </div>
+
+    </div>
+  </form>
+
+  <div class="row" style="margin-top:30px">
+    Values of the form: {{workersForm?.value | json }} <br> {{workersForm.get('salary').errors | json}}
+  </div>
 </div>
