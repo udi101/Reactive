@@ -27,18 +27,23 @@
       <div formGroupName='mailConfirmation'>
         <div class="row">
           <mat-form-field>
-            <input matInput type="text" role="textbox" placeholder="email address" formControlName="email">
+            <input matInput type="email" role="textbox" placeholder="email address" formControlName="email">
           </mat-form-field>
           <mat-form-field>
-            <input matInput type="text" placeholder="confirm email" formControlName="confirmEmail">
+            <input matInput type="email" placeholder="confirm email" formControlName="repeatEmail">
           </mat-form-field>
+        
+        <span *ngIf="workersForm.controls.mailConfirmation.errors?.emailsMatch &&
+                    workersForm.get('mailConfirmation.repeatEmail').touched">
+          <small>* The emails does not match</small></span>
         </div>
       </div>
 
       <div class="row">
+        Identify me by using: &nbsp;
         <mat-radio-group labelPosition="before" name="udi" formControlName="notification">
           <mat-radio-button value="email" color="primary" style="margin-right:20px">Email</mat-radio-button>
-          <mat-radio-button value="text" color="primary">Text</mat-radio-button>
+          <mat-radio-button value="text" color="primary">Text Message</mat-radio-button>
         </mat-radio-group>
       </div>
 
@@ -51,6 +56,8 @@
   </form>
 
   <div class="row" style="margin-top:30px">
-    Values of the form: {{workersForm?.value | json }} <br> {{workersForm.get('salary').errors | json}}
+    Values of the form: {{workersForm?.value | json }} <br>
+    {{workersForm.get('salary').errors | json}} <br>
+    email confirmation: {{workersForm.get('mailConfirmation').errors | json}}
   </div>
 </div>
