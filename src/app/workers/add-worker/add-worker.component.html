@@ -21,7 +21,7 @@
         <mat-form-field>
           <input matInput placeholder="Salary" type="number" formControlName="salary" #salary>
         </mat-form-field>
-        <span *ngIf="!!workersForm.get('salary').errors?.range && workersForm.controls.salary.dirty"><small>* The Salary is out of the accepted range</small></span>
+        <span *ngIf="salaryMessage"><small>* {{salaryMessage}}</small></span>
       </div>
 
       <div formGroupName='mailConfirmation'>
@@ -57,7 +57,7 @@
 
   <div class="row" style="margin-top:30px">
     Values of the form: {{workersForm?.value | json }} <br>
-    {{workersForm.get('salary').errors | json}} <br>
-    email confirmation: {{workersForm.get('mailConfirmation').errors | json}}
+    Salary Errors: {{workersForm.get('salary').errors | json}} <br>
+    {{workersForm.controls.salary.value}}
   </div>
 </div>
