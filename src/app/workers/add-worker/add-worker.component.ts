@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IWorker } from './../worker.interface';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/delay';
 
 @Component({
   selector: 'app-add-worker',
