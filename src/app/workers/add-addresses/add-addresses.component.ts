@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 
 @Component({
   templateUrl: './add-addresses.component.html',
@@ -7,16 +7,29 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class AddAddressesComponent implements OnInit {
   workersForm: FormGroup;
+  workers: Array<string> = ['udi', 'mazal', 'ela'];
+  get address(): FormArray {
+    return <FormArray>this.workersForm.get('address');
+  }
   constructor(private formBuilder: FormBuilder) {
-    this.workersForm = this.formBuilder.group({
-      addressType: '',
+  }
+
+  buildAddress(): FormGroup {
+    return this.formBuilder.group({
+      addressType: 'home',
       street: '',
       streetNumber: [{ value: '' }, Validators.min(1)],
-      city:''
+      city: ''
+    });
+  }
+  ngOnInit() {
+    this.workersForm = this.formBuilder.group({
+      address: <FormArray>this.formBuilder.array([this.buildAddress()])
     });
   }
 
-  ngOnInit() {
+  // Adding another address
+  addAddress(): void {
+    this.address.push(this.buildAddress());
   }
-
 }

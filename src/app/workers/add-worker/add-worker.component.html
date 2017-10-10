@@ -58,6 +58,7 @@
   <div class="row" style="margin-top:30px">
     Values of the form: {{workersForm?.value | json }} <br>
     Salary Errors: {{workersForm.get('salary').errors | json}} <br>
-    {{workersForm.controls.salary.value}}
+    {{workersForm.controls.salary.value}} <br>
+    {{workersForm.get('salary').errors | json}}
   </div>
 </div>
