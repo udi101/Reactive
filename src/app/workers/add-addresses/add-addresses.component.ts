@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormArray, AbstractControl } from '@angular/forms';
+import { CommonValidators } from './../../shared/validators';
 
 @Component({
   templateUrl: './add-addresses.component.html',
@@ -7,7 +8,6 @@ import { FormBuilder, FormGroup, Validators, FormArray } from '@angular/forms';
 })
 export class AddAddressesComponent implements OnInit {
   workersForm: FormGroup;
-  workers: Array<string> = ['udi', 'mazal', 'ela'];
   get address(): FormArray {
     return <FormArray>this.workersForm.get('address');
   }
@@ -18,7 +18,7 @@ export class AddAddressesComponent implements OnInit {
     return this.formBuilder.group({
       addressType: 'home',
       street: '',
-      streetNumber: [{ value: '' }, Validators.min(1)],
+      streetNumber: [{ value: '' }, CommonValidators.rangeValidator(2, 15)],
       city: ''
     });
   }
@@ -31,5 +31,10 @@ export class AddAddressesComponent implements OnInit {
   // Adding another address
   addAddress(): void {
     this.address.push(this.buildAddress());
+  }
+  showStreetErrors(): boolean {
+    const c: AbstractControl = this.workersForm.get('address.0.streetNumber');
+    console.log('The c VAlue is: ' + JSON.stringify(c.value));
+    return !!(c.dirty && c.value !== null && c.errors && c.errors['range'] !== 'undefined');
   }
 }

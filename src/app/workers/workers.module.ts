@@ -18,6 +18,8 @@ import { TableComponent } from './tables/table/table.component';
 import { CardsComponent } from './tables/cards/cards.component';
 import { AddAddressesComponent } from './add-addresses/add-addresses.component';
 
+// Services
+import { WorkersGuard } from './add-addresses/gueard.service';
 
 @NgModule({
     imports: [
@@ -35,13 +37,13 @@ import { AddAddressesComponent } from './add-addresses/add-addresses.component';
         RouterModule.forChild([
             { path: 'list', component: ListComponent },
             { path: 'add-worker', component: AddWorkerComponent },
-            { path: 'add-addresses', component: AddAddressesComponent },
+            { path: 'add-addresses', component: AddAddressesComponent, canDeactivate: [WorkersGuard] },
             { path: 'layout', component: LayoutComponent }
         ])
     ],
     exports: [],
     declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, LayoutComponent, TableComponent, CardsComponent, AddAddressesComponent],
-    providers: [WorkersService, TableService],
+    providers: [WorkersService, TableService, WorkersGuard],
     entryComponents: [TableComponent, CardsComponent]
 })
 export class WorkersModule {

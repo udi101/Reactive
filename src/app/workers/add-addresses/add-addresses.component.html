@@ -1,5 +1,5 @@
 <div class="page-header">
-  Add Addresses Dynamically
+  Add Addresses Dynamically, Deactivate route
 </div>
 <div class="container">
   <div class="row">
@@ -20,6 +20,8 @@
             <div class="form-group">
               <label [attr.for]="'number' + i" class="control-label">Street Number:</label>
               <input type="number" [attr.id]="'number'+i" formControlName="streetNumber" class="form-control input-sm" placeholder="Enter your housr number">
+              <span *ngIf="showStreetErrors()">
+                <small>{{workersForm.get('address.' + i + '.streetNumber').errors.range}}</small></span>
             </div>
             <div class="form-group">
               <label [attr.for]="'city' + i" class="control-label">City:</label>
@@ -33,8 +35,5 @@
   </div>
 </div>
 {{ workersForm.value | json}} <br> street errors: {{workersForm.get('address.0.streetNumber').errors | json}}
-
-
-<div>1
-  <div *ngFor="let worker of workers">{{worker}}</div>
-</div>
+<br>
+{{workersForm.get('address.0.streetNumber').errors | json}}
