@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, AbstractControl } from '@angular/forms';
 import { CommonValidators } from './../../shared/validators';
 
 @Component({
   templateUrl: './add-addresses.component.html',
-  styleUrls: ['./add-addresses.component.scss']
+  styleUrls: ['./add-addresses.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddAddressesComponent implements OnInit {
   workersForm: FormGroup;

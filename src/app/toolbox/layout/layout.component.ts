@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, AfterViewInit, OnDestroy, ComponentFactoryResolver, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, ComponentFactoryResolver, ViewChild } from '@angular/core';
 import { AdDirective } from './../../shared/directives/ad.directive';
 import { TableItem } from './../tables/table-item.interface';
 import { TableService } from './../tables/getTables.service';
@@ -8,18 +8,18 @@ import { TableService } from './../tables/getTables.service';
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent implements OnInit, OnDestroy {
-  @Input() tableItem: TableItem;
+  @Input() tableComponent: TableItem;
   @ViewChild(AdDirective) tableHost: AdDirective;
 
   constructor(private tableService: TableService, private componentFactoryResolver: ComponentFactoryResolver) { }
 
   ngOnInit() {
-    this.tableItem = this.tableService.getTable();
-    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.tableItem.component);
+    this.tableComponent = this.tableService.getTable();   // the component and data
+    const componentFactory = this.componentFactoryResolver.resolveComponentFactory(this.tableComponent.component);
     const viewContainerRef = this.tableHost.viewContainerRef;
-    console.log(this.tableItem.component);
+    console.log(this.tableComponent.component);
     const componentRef = viewContainerRef.createComponent(componentFactory);
-    (<TableItem>componentRef.instance).data = this.tableItem.data;
+    (<TableItem>componentRef.instance).data = this.tableComponent.data;
   }
   ngOnDestroy() { }
 

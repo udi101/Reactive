@@ -9,6 +9,6 @@ import { AdDirective } from './directives/ad.directive';
     declarations: [RedDirective, AdDirective],
     providers: []
 })
-export class Sharedodule {
+export class SharedModule {
 
 }
