@@ -23,4 +23,8 @@ export class LayoutComponent implements OnInit, OnDestroy {
   }
   ngOnDestroy() { }
 
+  getTtr(x: string) {
+    console.log('The string is: ' + x);
+  }
+
 }

@@ -1,0 +1,25 @@
+div.wrapper{
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    display: flex;
+    width:500px;
+    padding: 15px 0;
+    justify-content: space-around;
+    .item{
+        color:#2050a0;
+
+        label{
+            background-color: #fff;
+            border:0;
+            cursor: pointer;
+        }
+    }
+}
+div.active-tab{
+    position: absolute;
+    width:120px;
+    height: 2px;
+    background-color:#2050a0;
+    bottom: 0px;
+    // left:10px;
+}

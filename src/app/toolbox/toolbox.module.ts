@@ -10,19 +10,22 @@ import { CardsComponent } from './tables/cards/cards.component';
 
 // Services
 import { TableService } from './tables/getTables.service';
+import { TypescriptComponent } from './typescript/typescript.component';
 
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild([
-      { path: 'layout', component: LayoutComponent }
+      { path: 'layout', component: LayoutComponent },
+      { path: 'typescript', component: TypescriptComponent }
     ])
   ],
   declarations: [
     LayoutComponent,
     TableComponent,
-    CardsComponent
+    CardsComponent,
+    TypescriptComponent
   ],
   providers: [
     { provide: TableService, useClass: TableService }

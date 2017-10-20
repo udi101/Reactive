@@ -1,0 +1,9 @@
+<div class="wrapper">
+<div class="item">
+  <label (click)="active_tab='first'">first</label></div>
+<div class="item">
+    <label (click)="active_tab='second'">second</label></div>
+<div class="item">
+    <label (click)="active_tab='third'">third</label></div>
+<div class="active-tab" [@tab-change]="active_tab"></div>
+</div>
