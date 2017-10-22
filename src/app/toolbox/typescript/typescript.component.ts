@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -22,6 +23,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 
 export class TypescriptComponent implements OnInit {
   active_tab: String = 'first';
-  constructor() { }
-  ngOnInit() { }
+
+  constructor(private activatedRoute: ActivatedRoute) { }
+  ngOnInit() {
+    this.activatedRoute.snapshot.url.forEach(x => console.log(x.path));
+  }
 }

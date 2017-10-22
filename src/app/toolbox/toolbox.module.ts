@@ -18,7 +18,8 @@ import { TypescriptComponent } from './typescript/typescript.component';
     SharedModule,
     RouterModule.forChild([
       { path: 'layout', component: LayoutComponent },
-      { path: 'typescript', component: TypescriptComponent }
+      { path: 'typescript', component: TypescriptComponent },
+      { path: 'typescript/:id', component: TypescriptComponent }
     ])
   ],
   declarations: [
