@@ -13,6 +13,7 @@ import { WorkersService } from './workers.service';
 import { OrderbyPipe } from './pipes/orderby.pipe';
 import { AddWorkerComponent } from './add-worker/add-worker.component';
 import { AddAddressesComponent } from './add-addresses/add-addresses.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 // Services
 import { WorkersGuard } from './add-addresses/gueard.service';
@@ -32,11 +33,12 @@ import { WorkersGuard } from './add-addresses/gueard.service';
         RouterModule.forChild([
             { path: 'list', component: ListComponent },
             { path: 'add-worker', component: AddWorkerComponent },
-            { path: 'add-addresses', component: AddAddressesComponent, canDeactivate: [WorkersGuard] }
+            { path: 'add-addresses', component: AddAddressesComponent, canDeactivate: [WorkersGuard] },
+            { path: 'checkbox', component: CheckboxComponent }
         ])
     ],
     exports: [],
-    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, AddAddressesComponent],
+    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, AddAddressesComponent, CheckboxComponent],
     providers: [WorkersService, WorkersGuard]
 })
 export class WorkersModule {

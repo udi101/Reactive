@@ -1,0 +1,10 @@
+<div class="container">
+      <form [formGroup]="checkboxForm">
+        <label>
+          <input class="form-control input-sm" [formControlName]="'gender'" type="checkbox">
+          <span class="label-text">am I true?</span>
+        </label>
+      </form>
+      {{checkboxForm.controls.gender.value }}
+
+</div>

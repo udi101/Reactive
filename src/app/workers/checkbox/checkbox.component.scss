@@ -1,0 +1,24 @@
+
+$checkbox: input[type="checkbox"];
+ #{$checkbox} {
+  display: none;
+  +.label-text:before {
+    content: "\f096";
+  }
+  &:checked + .label-text:before{
+      content:"\f14a";
+      color:green;
+  }
+}
+.label-text:before{
+    margin-right: 3px;
+    font-family: "FontAwesome";
+    font-size: 1em;
+    width: 1em;
+    display: inline-block;
+    transition: all 200ms;
+}
+
+.container{
+    margin-top:10px;
+}
