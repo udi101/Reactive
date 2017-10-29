@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IWorker } from './../worker.interface';
 import { FormGroup, FormBuilder, Validators, AbstractControl, ValidatorFn } from '@angular/forms';
 import 'rxjs/add/operator/debounceTime';
@@ -9,7 +9,7 @@ import 'rxjs/add/operator/delay';
   templateUrl: './add-worker.component.html',
   styleUrls: ['./add-worker.component.scss']
 })
-export class AddWorkerComponent implements OnInit {
+export class AddWorkerComponent implements OnInit, OnDestroy {
   workersForm: FormGroup;
   worker: IWorker;
   salaryMessage: string;
@@ -22,7 +22,9 @@ export class AddWorkerComponent implements OnInit {
   // firstName: FormControl = new FormControl();
   constructor(private formBuildier: FormBuilder) { }
 
-
+  ngOnDestroy(): void {
+    console.log('Destroyed!!');
+  }
 
   ngOnInit() {
     this.workersForm = this.formBuildier.group({
@@ -57,7 +59,7 @@ export class AddWorkerComponent implements OnInit {
       this.setMessage(salaryControl));
   }
 
-// Setting the error messages for salaryMessage
+  // Setting the error messages for salaryMessage
   setMessage(c: AbstractControl): void {
     this.salaryMessage = '';
     if ((c.dirty || c.touched) && c.errors) {

@@ -12,9 +12,6 @@ export class WorkersService {
     workers$ = this.workers.asObservable();
 
     constructor(private http: Http) { }
-    // getWorkers() {
-    //     ((x, y) => { setTimeout(() => { x.next(y); }, 1000); })(this.workers, workers);
-    // }
 
 
     readWorkers() {
