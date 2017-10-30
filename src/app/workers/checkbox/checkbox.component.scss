@@ -9,6 +9,9 @@ $checkbox: input[type="checkbox"];
     color: green;
   }
 }
+.label-text{
+  cursor: pointer;
+}
 
 .label-text:before {
   margin-right: 3px;
@@ -16,7 +19,7 @@ $checkbox: input[type="checkbox"];
   font-size: 1em;
   width: 1em;
   display: inline-block;
-  transition: all 200ms;
+  transition: color 150ms;
 }
 
 .container {

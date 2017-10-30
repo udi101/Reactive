@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { NoConflictStyleCompatibilityMode } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { MatButtonModule, MatMenuModule, MatToolbarModule } from '@angular/material';
+
+import { CKEditorModule } from 'ng2-ckeditor';
 
 
 // Components
@@ -17,6 +20,7 @@ import { CoreModule } from './core/core.module';
 
   ],
   imports: [
+    NoConflictStyleCompatibilityMode,
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
