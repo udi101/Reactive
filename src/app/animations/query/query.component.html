@@ -1,0 +1,17 @@
+
+<div class="rectangle" [ngClass]="_class" #rectangle></div>
+<button class="btn-sm" (click)="widthToggle()">Change Button</button>
+
+<div class="anim"></div>
+<h4>Udi Mazor</h4>
+<article>
+  <section>
+    The <code>:host(.class)</code> selector is catching the component selector classes as it was defined in the container class. 
+  </section>
+  <section>
+    The orange color of the h4 tag comes from the container component that is using the deep keyword like that:<code> /deep/ h4 </code>
+  </section>
+  <section>
+    The <code>:host-context(.class)</code> is applies to elements that are somewere nested from the .class condition. The condition can be also tag, id or condition
+  </section>
+</article>

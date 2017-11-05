@@ -1,0 +1,23 @@
+:host{
+    color:red;
+    display: flex;
+    justify-content: space-around;
+    width:100%;
+
+    // width: 50%;
+    // border: 1px solid gray;
+    // color:orange;
+}   
+
+.test{
+  border:1px solid black;
+  width:100px;
+  height:50px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+.gw-test {
+    width: 50%;
+    border: 1px solid gray;
+    color:orange;
+}

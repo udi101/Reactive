@@ -1,0 +1,57 @@
+:host{
+    color:#202050;
+}
+:host(.blue){
+    color:blue;
+}
+:host-context(.test)
+{
+    color:aqua;
+}
+
+.rectangle {
+  height: 50px;
+  background: linear-gradient(#fff, #2050c0);
+  border: 2px solid;
+  position: relative;
+  transition: left 0.5s linear 0.3s, width 0.5s;
+}
+
+.big {
+  width: 100px;
+  left: 0;
+}
+
+.small {
+  width: 60px;
+  left:150px;
+}
+button{
+    margin-bottom: 20px;
+}
+
+.anim{
+    width:100px;
+    height: 50px;
+    position: relative;
+    left:0;
+    border:2px solid #2050a0;
+    background: #0050c0;
+    transform: rotate(0);
+    animation: moves 7s linear infinite;
+}
+
+@keyframes moves{
+    0%{
+        transform: translateX(0);
+        transform: rotate(0);
+    }
+    50%{
+        transform: translateX(200px) rotate(180deg);
+        // transform: rotate(90deg);
+    }
+    100%{
+        transform: translateX(0px) rotate(0deg);
+        // transform: rotate(180deg);
+    }
+}

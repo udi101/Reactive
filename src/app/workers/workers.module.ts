@@ -18,6 +18,7 @@ import { workersServiceFactory } from './workers.service.factory';
 
 // Services
 import { WorkersGuard } from './add-addresses/gueard.service';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
     imports: [
@@ -39,7 +40,7 @@ import { WorkersGuard } from './add-addresses/gueard.service';
         ])
     ],
     exports: [],
-    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, AddAddressesComponent, CheckboxComponent],
+    declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, AddAddressesComponent, CheckboxComponent, TestComponent],
     providers: [
         { provide: WorkersService, useFactory: workersServiceFactory, deps: [Http] },
         WorkersGuard]
