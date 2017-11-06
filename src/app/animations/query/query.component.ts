@@ -1,10 +1,15 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { style, state, transition, trigger, animate } from '@angular/animations';
-
+import { trigger, state, style } from '@angular/animations';
 @Component({
   selector: 'app-query',
   templateUrl: './query.component.html',
-  styleUrls: ['./query.component.scss']})
+  styleUrls: ['./query.component.scss'],
+  animations: [trigger('tabState', [
+    state('default', style({
+      backgroundColor: '#ff0000'
+    }))
+  ])]
+})
 
 export class QueryComponent implements OnInit {
   _class: String = 'big';

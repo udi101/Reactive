@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { MatButtonModule, MatMenuModule, MatToolbarModule } from '@angular/material';
 
-import { CKEditorModule } from 'ng2-ckeditor';
+// import { CKEditorModule } from 'ng2-ckeditor';
 
 
 // Components
