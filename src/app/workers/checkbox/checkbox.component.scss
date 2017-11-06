@@ -13,6 +13,10 @@ $checkbox: input[type="checkbox"];
   }
 }
 
+.label-text {
+  cursor: pointer;
+}
+
 .label-text:before {
   margin-right: 3px;
   font-family: "FontAwesome";
@@ -27,16 +31,16 @@ $checkbox: input[type="checkbox"];
 }
 
 .gw-test {
-    width: 50%;
-    border: 1px solid gray;
-    color:orange;
+  width: 50%;
+  border: 1px solid gray;
+  color: orange;
 }
 
 .test-inner {
   color: red;
   display: flex;
   justify-content: space-around;
-   width:100%;
+  width: 100%;
 }
 
 .test {
