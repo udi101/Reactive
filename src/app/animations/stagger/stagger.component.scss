@@ -1,3 +1,28 @@
-/deep/ h4{
-    color:orange;
+div.block {
+  width: 100px;
+  position: relative;
+  height: 60px;
+  border: 2px solid black;
+}
+
+div.kk {
+  animation: movit 1s ease-in 1s infinite;
+}
+
+@keyframes movit {
+  0% {
+    left: 0;
+    width: 100px;
+    height: 60px;
+  }
+  80% {
+    height: 110px;
+  }
+  100% {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0;
+    transform: skewX(20deg) rotate(90deg);
+    left: 20px;
+  }
 }
