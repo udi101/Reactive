@@ -1,35 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animation, keyframes } from '@angular/animations';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-simple',
   templateUrl: './simple.component.html',
   styleUrls: ['./simple.component.scss'],
   animations: [
-    trigger('clicked', [
-      state('default', style(
-        {
-          width: '150px',
-          translateX: '10px',
-          backgroundColor: 'orange',
-          height: '60px'
-        }
-      )),
-      state('clicked', style(
-        {
-          width: '120px',
-          translateX: '0px',
-          backgroundColor: 'orange',
-          height: '90px'
-        }
-      )),
+    trigger('clicker', [
+      state('default', style({
+        backgroundColor: '#3060f0',
+        transform:'translateX(100px)'
+      })),
+      state('clicked', style({
+        backgroundColor: 'orange'
+      })),
+      transition('default <=> clicked', animate('200ms  ease-in'))
     ])
   ]
 })
 export class SimpleComponent implements OnInit {
-
+  state: string;
   constructor() { }
 
   ngOnInit() {
+    this.state = 'default';
+  }
+  changeState() {
+    this.state = this.state === 'clicked' ? 'default' : 'clicked';
   }
 
 }

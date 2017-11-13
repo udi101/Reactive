@@ -3,5 +3,6 @@ div.simple {
   height: 60px;
   border: 2px solid darkslategray;
   box-sizing: border-box;
-  background-color: orange;
+  border-radius: 10px;
+  transform: translateX(20px);
 }
