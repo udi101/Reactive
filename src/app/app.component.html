@@ -13,6 +13,7 @@
 </mat-menu>
 <button mat-button [matMenuTriggerFor]="animations">Animations</button>
 <mat-menu [overlapTrigger]="false" #animations="matMenu">
+  <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
   <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
 </mat-menu>
 </div>

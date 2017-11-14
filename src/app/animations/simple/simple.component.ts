@@ -7,13 +7,15 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   animations: [
     trigger('clicker', [
       state('default', style({
-        backgroundColor: '#3060f0',
-        transform:'translateX(100px)'
+        backgroundColor: '#3060f0'
+
       })),
       state('clicked', style({
-        backgroundColor: 'orange'
+        backgroundColor: 'orange',
+        transform: 'translateX(300px) rotate(90deg)',
+        height: '300px'
       })),
-      transition('default <=> clicked', animate('200ms  ease-in'))
+      transition('default <=> clicked', animate('200ms  ease-out'))
     ])
   ]
 })
