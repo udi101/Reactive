@@ -1,3 +1,12 @@
 <div class="simple" [@clicker]="state">
 </div>
-<button class="btn btn-sm btn-primary" (click)="changeState()">Change</button>
+<button class="btn btn-sm btn-primary" (input)="changeState()">Change</button>
+<hr>
+<input type="number" (input)="numberEntered = $event.target.value">
+<br>
+<br>
+<span [@numberEnteredState]="numberEntered==1 ? 'selected' : 'unSelected'">1</span>
+<span [@numberEnteredState]="numberEntered==2 ? 'selected' : 'unSelected'">2</span>
+<span [@numberEnteredState]="numberEntered==3 ? 'selected' : 'unSelected'">3</span>
+<span [@numberEnteredState]="numberEntered==4 ? 'selected' : 'unSelected'">4</span>
+<span [@numberEnteredState]="numberEntered==5 ? 'selected' : 'unSelected'">5</span>

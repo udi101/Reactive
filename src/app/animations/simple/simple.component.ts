@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 @Component({
   selector: 'app-simple',
@@ -16,11 +16,28 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         height: '300px'
       })),
       transition('default <=> clicked', animate('200ms  ease-out'))
+    ]),
+    trigger('numberEnteredState', [
+      state('unSelected', style({
+        border: '1px solid black',
+        padding: '6px',
+        boxShadow: '2px 2px 4px'
+        // transform: 'rotate(0deg)'
+      })),
+      state('selected', style({
+        border: '2px solid black',
+        padding: '6px',
+        backgroundColor: '#2050a0',
+        color: 'white',
+        transform: 'rotate(15deg)'
+      })),
+      transition('selected <=> *', animate('300ms'))
     ])
   ]
 })
 export class SimpleComponent implements OnInit {
   state: string;
+  numberEntered;
   constructor() { }
 
   ngOnInit() {
@@ -28,6 +45,9 @@ export class SimpleComponent implements OnInit {
   }
   changeState() {
     this.state = this.state === 'clicked' ? 'default' : 'clicked';
+  }
+  log(tt) {
+    console.log(tt.target.value);
   }
 
 }
