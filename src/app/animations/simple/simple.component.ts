@@ -13,16 +13,15 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state('clicked', style({
         backgroundColor: 'orange',
         transform: 'translateX(300px) rotate(90deg)',
-        height: '300px'
+        height: '50px'
       })),
-      transition('default <=> clicked', animate('200ms  ease-out'))
+      transition('default <=> clicked', animate('300ms  ease-out'))
     ]),
     trigger('numberEnteredState', [
       state('unSelected', style({
         border: '1px solid black',
         padding: '6px',
         boxShadow: '2px 2px 4px'
-        // transform: 'rotate(0deg)'
       })),
       state('selected', style({
         border: '2px solid black',
@@ -31,7 +30,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
         color: 'white',
         transform: 'rotate(15deg)'
       })),
-      transition('selected <=> *', animate('300ms'))
+      transition('selected <=> *', [
+        animate('300ms')
+      ])
     ])
   ]
 })
