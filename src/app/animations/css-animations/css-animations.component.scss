@@ -1,0 +1,22 @@
+div.animation{
+    width:50px;
+    height:35px;
+    border:2px solid black;
+    margin-top: 20px;
+    margin-left: 50px;
+    animation: example 1.5s linear infinite;
+    transition: background-color 300ms linear;
+}
+
+
+@keyframes example{
+    0%{
+       transform: rotate(0deg);
+    }
+    50%{
+        transform: scale(1.4) rotate(+90deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}

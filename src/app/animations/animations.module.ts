@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { QueryComponent } from './query/query.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, CanDeactivate } from '@angular/router';
 import { StaggerComponent } from './stagger/stagger.component';
 import { MatTabsModule } from '@angular/material';
 import { TabsComponent } from './tabs/tabs.component';
 import { SimpleComponent } from './simple/simple.component';
 import { AnimationsComponent } from './animations.component';
+import { CssAnimationsComponent } from './css-animations/css-animations.component';
+import { ExitCss } from './router.guard';
 
 @NgModule({
   imports: [
@@ -17,11 +19,13 @@ import { AnimationsComponent } from './animations.component';
         path: '', component: AnimationsComponent, children: [
           { path: 'query', component: QueryComponent },
           { path: 'stagger', component: StaggerComponent },
-          { path: 'simple', component: SimpleComponent }
+          { path: 'simple', component: SimpleComponent },
+          { path: 'css_animations', component: CssAnimationsComponent, canDeactivate: [ExitCss] }
         ]
       }
     ])
   ],
-  declarations: [AnimationsComponent, QueryComponent, StaggerComponent, TabsComponent, SimpleComponent]
+  declarations: [AnimationsComponent, QueryComponent, StaggerComponent, TabsComponent, SimpleComponent, CssAnimationsComponent],
+  providers: [ExitCss]
 })
 export class AnimationsModule { }

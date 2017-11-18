@@ -5,13 +5,13 @@
 <input type="number" (input)="numberEntered = $event.target.value">
 <br>
 <br>
-<span [@numberEnteredState]="numberEntered==1 ? 'selected' : 'unSelected'">1</span>
-<span [@numberEnteredState]="numberEntered==2 ? 'selected' : 'unSelected'">2</span>
-<span [@numberEnteredState]="numberEntered==3 ? 'selected' : 'unSelected'">3</span>
-<span [@numberEnteredState]="numberEntered==4 ? 'selected' : 'unSelected'">4</span>
-<span [@numberEnteredState]="numberEntered==5 ? 'selected' : 'unSelected'">5</span>
-<span [@numberEnteredState]="numberEntered==6 ? 'selected' : 'unSelected'">6</span>
-<span [@numberEnteredState]="numberEntered==7 ? 'selected' : 'unSelected'">7</span>
-<span [@numberEnteredState]="numberEntered==8 ? 'selected' : 'unSelected'">8</span>
-<span [@numberEnteredState]="numberEntered==9 ? 'selected' : 'unSelected'">9</span>
-<span [@numberEnteredState]="numberEntered==10 ? 'selected' : 'unSelected'">10</span>
+<span (click)="numberEntered=1" [@numberEnteredState]="numberEntered==1 ? 'selected' : 'unSelected'">1</span>
+<span (click)="numberEntered=2" [@numberEnteredState]="numberEntered==2 ? 'selected' : 'unSelected'">2</span>
+<span (click)="numberEntered=3" [@numberEnteredState]="numberEntered==3 ? 'selected' : 'unSelected'">3</span>
+<span (click)="numberEntered=4" [@numberEnteredState]="numberEntered==4 ? 'selected' : 'unSelected'">4</span>
+<span (click)="numberEntered=5" [@numberEnteredState]="numberEntered==5 ? 'selected' : 'unSelected'">5</span>
+<span (click)="numberEntered=6" [@numberEnteredState]="numberEntered==6 ? 'selected' : 'unSelected'">6</span>
+<span (click)="numberEntered=7" [@numberEnteredState]="numberEntered==7 ? 'selected' : 'unSelected'">7</span>
+<span (click)="numberEntered=8" [@numberEnteredState]="numberEntered==8 ? 'selected' : 'unSelected'">8</span>
+<span (click)="numberEntered=9" [@numberEnteredState]="numberEntered==9 ? 'selected' : 'unSelected'">9</span>
+<span (click)="numberEntered=10" [@numberEnteredState]="numberEntered==10 ? 'selected' : 'unSelected'">10</span>
