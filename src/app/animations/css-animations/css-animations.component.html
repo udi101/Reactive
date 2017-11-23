@@ -1,2 +1,6 @@
 
 <div class="animation" (mouseover)="log($event)" (click)="changeBackgroundColor()" [ngStyle]="{backgroundColor: currentColor}"></div>
+
+<app-bananabox [(counter)]="counterValue"></app-bananabox>
+<button class="btn btn-sm" (click)="increment()">Increment</button>
+{{counterValue}}

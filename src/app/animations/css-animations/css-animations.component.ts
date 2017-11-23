@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-css-animations',
@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CssAnimationsComponent implements OnInit {
   currentColor: String = 'red';
+  counterValue = 7;
+
 
   constructor() { }
 
-  ngOnInit() { }
-
+  ngOnInit() {
+  }
+  increment() {
+    this.counterValue++;
+  }
   changeBackgroundColor() {
     this.currentColor = this.currentColor === 'white' ? 'red' : 'white';
   }

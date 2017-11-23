@@ -8,6 +8,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { SimpleComponent } from './simple/simple.component';
 import { AnimationsComponent } from './animations.component';
 import { CssAnimationsComponent } from './css-animations/css-animations.component';
+import { BananaboxComponent } from './bananabox/bananabox.component';
 import { ExitCss } from './router.guard';
 
 @NgModule({
@@ -25,7 +26,9 @@ import { ExitCss } from './router.guard';
       }
     ])
   ],
-  declarations: [AnimationsComponent, QueryComponent, StaggerComponent, TabsComponent, SimpleComponent, CssAnimationsComponent],
+  declarations: [
+    AnimationsComponent, QueryComponent, StaggerComponent, TabsComponent,
+    SimpleComponent, CssAnimationsComponent, BananaboxComponent],
   providers: [ExitCss]
 })
 export class AnimationsModule { }
