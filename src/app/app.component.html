@@ -1,22 +1,30 @@
 <div class="button-row">
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu [overlapTrigger]="false" #menu="matMenu">
-  <button role="link" mat-menu-item  routerLink="workers/list">Workers List</button>
-  <button role="link" mat-menu-item routerLink="workers/add-worker">Add Worker</button>
-  <button mat-menu-item routerLink="workers/add-addresses">Dynamically add Addresses</button>
-  <button mat-menu-item routerLink="workers/checkbox">Checkbox Implementation</button>
-</mat-menu>
-<button mat-button [matMenuTriggerFor]="toolbox">Toolbox</button>
-<mat-menu [overlapTrigger]="false" #toolbox="matMenu">
-  <button role="link" mat-menu-item routerLink="/toolbox/layout">layout</button>
-  <button role="link" mat-menu-item routerLink="/toolbox/typescript">typescript</button>
-</mat-menu>
-<button mat-button [matMenuTriggerFor]="animations">Animations</button>
-<mat-menu [overlapTrigger]="false" #animations="matMenu">
-  <button role="link" mat-menu-item routerLink="/animations/css_animations">Css Animations</button>
-  <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
-  <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
-</mat-menu>
-</div>
+  <button mat-button [matMenuTriggerFor]="menu">Workers</button>
+  <mat-menu [overlapTrigger]="false" #menu="matMenu">
+    <button role="link" mat-menu-item routerLink="workers/list">Workers List</button>
+    <button role="link" mat-menu-item routerLink="workers/add-worker">Add Worker</button>
+    <button mat-menu-item routerLink="workers/add-addresses">Dynamically add Addresses</button>
+    <button mat-menu-item routerLink="workers/checkbox">Checkbox Implementation</button>
+  </mat-menu>
 
+  <button mat-button [matMenuTriggerFor]="school">School</button>
+  <mat-menu [overlapTrigger]="false" #school>
+    <button role="link" mat-menu-item routerLink="school/studentList">Student List</button>
+    <button role="link" mat-menu-item routerLink="school/add-student">Add Student</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="toolbox">Toolbox</button>
+  <mat-menu [overlapTrigger]="false" #toolbox="matMenu">
+    <button role="link" mat-menu-item routerLink="/toolbox/layout">layout</button>
+    <button role="link" mat-menu-item routerLink="/toolbox/typescript">typescript</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="animations">Animations</button>
+  <mat-menu [overlapTrigger]="false" #animations="matMenu">
+    <button role="link" mat-menu-item routerLink="/animations/css_animations">Css Animations</button>
+    <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
+    <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
+  </mat-menu>
+</div>
+<div class="container-fluid">
 <router-outlet></router-outlet>
+</div>

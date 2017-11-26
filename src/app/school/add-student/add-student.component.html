@@ -1,0 +1,17 @@
+<form [formGroup]="studentForm" (ngSubmit)="insertStudent()" novalidate>
+  <mat-form-field>
+    <input type="text" placeholder="first name" matInput [formControlName]="'firstName'">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="text" placeholder="last name" matInput [formControlName]="'lastName'">
+  </mat-form-field>
+  <mat-form-field>
+    <input type="number" matInput formControlName="age">
+  </mat-form-field><span>{{studentForm.get('age').errors?.age}}</span>
+  <input type="submit">
+</form>
+
+<!-- this is the same -->
+{{studentForm.get('firstName').valid}}
+{{studentForm.controls.firstName.valid}}
+{{studentForm.get('age').errors?.age}}

@@ -8,7 +8,8 @@ import { ToolboxComponent } from './toolbox/toolbox.component';
         RouterModule.forRoot([
             { path: 'workers', component: WorkerComponent, loadChildren: './workers/workers.module#WorkersModule' },
             { path: 'toolbox', component: ToolboxComponent, loadChildren: './toolbox/toolbox.module#ToolboxModule' },
-            { path: 'animations', loadChildren: './animations/animations.module#AnimationsModule' }
+            { path: 'animations', loadChildren: './animations/animations.module#AnimationsModule' },
+            {path: 'school', loadChildren: './school/school.module#SchoolModule'}
         ])
     ],
     exports: [RouterModule],
