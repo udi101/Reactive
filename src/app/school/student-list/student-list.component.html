@@ -22,3 +22,8 @@
   </table>
 
 </div></div>
+<button class="btn btn-sm" (click)="divStatus=divStatus==='0'?'1':'0'">open Div</button>
+<div class="big" *ngIf="divStatus==='1'" [@divClick]="divStatus" contenteditable="true"
+style="width:300px;height:100px;overflow: hidden; border:2px solid #3070a0;">
+Udi Mazor
+</div>
