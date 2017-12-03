@@ -3,4 +3,11 @@
 
 <app-bananabox [(counter)]="counterValue"></app-bananabox>
 <button class="btn btn-sm" (click)="increment()">Increment</button>
+
 {{counterValue}}
+
+<hr>
+<button class="btn btn-sm" (click)="addName()">Add Name</button>
+<br><br>
+
+<app-change-detection [names]="names"></app-change-detection>

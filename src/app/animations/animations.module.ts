@@ -10,6 +10,7 @@ import { AnimationsComponent } from './animations.component';
 import { CssAnimationsComponent } from './css-animations/css-animations.component';
 import { BananaboxComponent } from './bananabox/bananabox.component';
 import { ExitCss } from './router.guard';
+import { ChangeDetectionComponent } from './change-detection/change-detection.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,7 @@ import { ExitCss } from './router.guard';
   ],
   declarations: [
     AnimationsComponent, QueryComponent, StaggerComponent, TabsComponent,
-    SimpleComponent, CssAnimationsComponent, BananaboxComponent],
+    SimpleComponent, CssAnimationsComponent, BananaboxComponent, ChangeDetectionComponent],
   providers: [ExitCss]
 })
 export class AnimationsModule { }
