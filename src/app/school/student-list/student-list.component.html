@@ -12,11 +12,11 @@
     </thead>
     <tbody>
       <tr *ngFor="let student of studentsList">
-        <td>{{student.name}}</td>
-        <td>{{student.last}}</td>
-        <td>{{student.age}}</td>
-        <td>{{student.address.street}}</td>
-        <td>{{student.address.streetNumber}}</td>
+        <td>{{student?.name}}</td>
+        <td>{{student?.last}}</td>
+        <td>{{student?.age}}</td>
+        <td>{{student?.address?.street}}</td>
+        <td>{{student?.address?.streetNumber}}</td>
       </tr>
     </tbody>
   </table>

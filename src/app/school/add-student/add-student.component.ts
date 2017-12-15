@@ -3,8 +3,6 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 
 import { IStudent } from './../interfaces/student.interface';
 import { SchoolService } from './../school.service';
-import { instantiateSupportedAnimationDriver } from '@angular/platform-browser/animations/src/providers';
-import { strictEqual } from 'assert';
 
 @Component({
   selector: 'app-add-student',

@@ -5,11 +5,11 @@
   </mat-form-field>
   <mat-form-field>
     <input type="text" placeholder="last name" matInput [formControlName]="'lastName'">
-  </mat-form-field>
+  </mat-form-field> 
   <mat-form-field>
     <input type="number" matInput formControlName="age">
   </mat-form-field><span>{{studentForm.get('age').errors?.age}}</span>
-  <input type="submit">
+  <button mat-raised-button>Basic</button>
 </form>
 </div>
 <!-- this is the same -->
