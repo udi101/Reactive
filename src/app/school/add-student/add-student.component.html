@@ -1,18 +1,30 @@
-<div class="col-sm-5">
-<form [formGroup]="studentForm" (ngSubmit)="insertStudent()" novalidate>
-  <mat-form-field>
-    <input type="text" placeholder="first name" matInput [formControlName]="'firstName'">
-  </mat-form-field>
-  <mat-form-field>
-    <input type="text" placeholder="last name" matInput [formControlName]="'lastName'">
-  </mat-form-field> 
-  <mat-form-field>
-    <input type="number" matInput formControlName="age">
-  </mat-form-field><span>{{studentForm.get('age').errors?.age}}</span>
-  <button mat-raised-button>Basic</button>
-</form>
+<div class="form-wrapper">
+  <form [formGroup]="frmStudent" (ngSubmit)="addStudent()" novalidate>
+    <mat-form-field>
+      <input type="text" matInput formControlName="name" placeholder="Student name">
+      <mat-hint>Please insert the student first name</mat-hint>
+      <mat-error>The student name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput formControlName="last" placeholder="Student last name">
+      <mat-hint>Please insert the student last name</mat-hint>
+      <mat-error>The student last name is required</mat-error>
+    </mat-form-field>
+    <mat-form-field numberInput>
+      <input matInput type="number" placeholder="Student's age" formControlName="age">
+      <mat-error>The age is not in the valid range</mat-error>
+      <mat-hint>Please Enter the student age</mat-hint>
+    </mat-form-field>
+    <ng-container formArrayName="degrees" style="display: flex; flex-flow: row wrap">
+      <div *ngFor="let d of frmStudent.get('degrees').controls; let i = index" style="display: flex; justify-content: space-between">
+      <mat-form-field style="flex:1 0">
+        <input matInput type="text" [formControlName]="i" placeholder="Degree">
+        <mat-hint>Insert the student's degree</mat-hint>
+      </mat-form-field>
+      <button mat-icon-button (click)="addDegree()" style="flex: 0 1 30px">
+        <i class="fa fa-plus"></i>
+      </button>
+    </div></ng-container>
+    <button type="submit" mat-raised-button color="primary">Add Student</button>
+  </form>
 </div>
-<!-- this is the same -->
-{{studentForm.get('firstName').valid}}
-{{studentForm.controls.firstName.valid}}
-{{studentForm.get('age').errors?.age}}

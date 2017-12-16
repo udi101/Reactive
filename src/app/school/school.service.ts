@@ -12,7 +12,7 @@ export class SchoolService {
 }
 
 let studentList: Array<IStudent> = [
-    { name: 'udi', last: 'mazor', age: 43, address: { street: 'Levi Eshkol', streetNumber: 105 } },
+    { name: 'udi', last: 'mazor', age: 43, degrees: ['b.sc', 'b.a'], address: { street: 'Levi Eshkol', streetNumber: 105 } },
     { name: 'ella', last: 'fingrit', age: 32, address: { street: 'hashomer', streetNumber: 52 } },
     { name: 'avigail', last: 'mazor', age: 3, address: { street: 'Levi Eshkol', streetNumber: 95 } },
 ];

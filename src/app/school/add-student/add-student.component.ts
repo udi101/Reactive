@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
-
+import { FormGroup, FormControl, FormBuilder, FormArray, Validators } from '@angular/forms';
 import { IStudent } from './../interfaces/student.interface';
-import { SchoolService } from './../school.service';
+import { formControlBinding } from '@angular/forms/src/directives/ng_model';
+
 
 @Component({
   selector: 'app-add-student',
@@ -10,34 +10,36 @@ import { SchoolService } from './../school.service';
   styleUrls: ['./add-student.component.scss']
 })
 export class AddStudentComponent implements OnInit {
+  frmStudent: FormGroup;
 
-  studentForm: FormGroup;
-
-  constructor(private formBuilder: FormBuilder,
-    private schoolService: SchoolService) { }
-
+  constructor(private formBuilder: FormBuilder) { }
   ngOnInit() {
-    this.studentForm = this.formBuilder.group(
+    this.createStudentForm();
+  }
+
+  degreeBuilder(): FormControl {
+    return this.formBuilder.control('');
+  }
+
+  addDegree() {
+    this.frmStudent.controls.degrees.push(this.degreeBuilder());
+  }
+
+  createStudentForm() {
+    this.frmStudent = this.formBuilder.group(
       {
-        firstName: ['', Validators.required],
-        lastName: { value: '', disabled: false },
-        age: [{ value: 0, disabled: false }, [Validators.required, Validators.min(10), validateAge]]
+        name: ['', Validators.required],
+        last: ['', Validators.required],
+        age: ['', [Validators.min(10), Validators.max(100)]],
+        degrees: <FormArray>this.formBuilder.array([this.degreeBuilder()])
       });
   }
 
-  insertStudent() {
-    let student: IStudent;
-    student = Object.assign(<IStudent>this.studentForm.value);
-    this.schoolService.insertStudent(student);
-    console.log(student);
-
+  addStudent() {
+    console.log(this.frmStudent);
   }
 }
 
-function validateAge(c: AbstractControl): { [key: string]: string | null } {
-  if (c.value === 30) {
-    return { 'age': 'This is the wrong age' };
-  } else { return null; }
-}
+
 
 
