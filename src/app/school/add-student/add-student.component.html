@@ -1,5 +1,5 @@
 <div class="form-wrapper">
-  <form [formGroup]="frmStudent" (ngSubmit)="addStudent()" novalidate>
+  <form [formGroup]="frmStudent" novalidate>
     <mat-form-field>
       <input type="text" matInput formControlName="name" placeholder="Student name">
       <mat-hint>Please insert the student first name</mat-hint>
@@ -25,6 +25,6 @@
         <i class="fa fa-plus"></i>
       </button>
     </div></ng-container>
-    <button type="submit" mat-raised-button color="primary">Add Student</button>
+    <button type="submit" (click)="addStudent()" mat-raised-button color="primary">Add Student</button>
   </form>
 </div>
