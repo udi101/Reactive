@@ -1,0 +1,259 @@
+[33mcommit 7710a85327d76c2701b353fd2f68352bd1708766[m[33m ([m[1;36mHEAD[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/home[m[33m, [m[1;32mmaster[m[33m)[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Dec 19 23:18:10 2017 +0200
+
+    added unit testing for student list
+
+[33mcommit 7a01eba65576f30ea9067fb834aba18ea0448906[m
+Merge: fd41ad9 945d79b
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Dec 17 23:16:22 2017 +0200
+
+    Merge branch 'master' of https://github.com/udi101/Reactive
+
+[33mcommit fd41ad90d72f2cad59c7d979838d2518b51db8a4[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Dec 17 23:16:00 2017 +0200
+
+    add Student
+
+[33mcommit 945d79b79420b1ef03e3e36b0f20c3971bb8720b[m[33m ([m[1;32mtest[m[33m)[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Dec 17 00:40:10 2017 +0200
+
+    more changes to add student
+
+[33mcommit aa8a7d528550dbdc597530bf52b861371b694220[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sat Dec 16 23:49:11 2017 +0200
+
+    add studen dynamically
+
+[33mcommit 2aadefdc0aa9dd1b9e46d070c3b302ae58a4f792[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sat Dec 16 00:01:09 2017 +0200
+
+    add student
+
+[33mcommit 0752e508399ae07bb0e4d7dcf283c2909135151b[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Thu Dec 14 22:46:11 2017 +0200
+
+    upgrade to angular 5
+
+[33mcommit ddb3faf4ff51b2eca21326a9b242268863313250[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Dec 3 23:51:11 2017 +0200
+
+    change detection
+
+[33mcommit 0b5456a15ad3a3fb740c119e5d8ede29c60be515[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Nov 28 23:41:16 2017 +0200
+
+    animation void
+
+[33mcommit 22c888f36694ff3fbd3de6bf8f4a44f22c1849ac[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Mon Nov 27 00:05:34 2017 +0200
+
+    school
+
+[33mcommit fa37e0527e2a1ed80e52537789f1a884b4371568[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Fri Nov 24 00:01:43 2017 +0200
+
+    banana in a box
+
+[33mcommit adeaf64685e2155c256cccca1f23125fd2a67651[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Nov 19 01:23:00 2017 +0200
+
+    animations
+
+[33mcommit 49d0aa8b6b1104e493724b51c57e320f905b5dc9[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Fri Nov 17 00:23:57 2017 +0200
+
+    animations
+
+[33mcommit 95ffcf82f288e70106a49e84bfd6b00bb71bf3c5[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Thu Nov 16 00:02:38 2017 +0200
+
+    animations
+
+[33mcommit dbeb8c5f1e3186ca5725aff6d3797f08becc58bc[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Tue Nov 14 10:51:01 2017 +0200
+
+    animations
+
+[33mcommit 52042340469e39541ef823a343d7b6a42620fae3[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Nov 14 00:28:20 2017 +0200
+
+    animations simple
+
+[33mcommit 2acaf778c239cec483567e48d3c77e1dd884b1a9[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Mon Nov 13 18:13:43 2017 +0200
+
+    animations
+
+[33mcommit 9ebe87fc7aaf0311c319c2c5beb487bfd4989f44[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Nov 7 00:57:14 2017 +0200
+
+    animations
+
+[33mcommit 67db1e9df4f81442c1b6ccc314f49b40e65b3b13[m
+Merge: 5fab413 276da3c
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Nov 7 00:20:48 2017 +0200
+
+    7/11/2017
+
+[33mcommit 5fab413d9f07cab57291bc7c36b86f9a3a3c321c[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Nov 5 22:05:19 2017 +0200
+
+    animations
+
+[33mcommit 72409906192e6cc7521a4d8828465561e1b5304c[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Thu Nov 2 23:00:37 2017 +0200
+
+    2.11.2017
+
+[33mcommit 276da3ca5931c2a577edf0a59259cc550a8d4898[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Mon Oct 30 13:09:44 2017 +0200
+
+    fixing errors
+
+[33mcommit 80dd6008ecf6afa2a492b62525aaf71324b9380c[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 29 23:18:30 2017 +0200
+
+    module inport guard
+
+[33mcommit f652efa05fd01626b832cae7ee5866c06a282303[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 29 20:18:07 2017 +0200
+
+    provide with useFactory
+
+[33mcommit e3d995bc0019a2a1f814d21c863189c86f9f043d[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 29 01:20:33 2017 +0300
+
+    checkbox
+
+[33mcommit d0da0aeed1164a9fc113259ea5297958535937a0[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 22 23:14:23 2017 +0300
+
+    parametered routes
+
+[33mcommit 979864424efe0b6968d6fc70dd2efd5e2bb9dad6[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sat Oct 21 00:46:08 2017 +0300
+
+    material design tabs implmented with pure css
+
+[33mcommit df667b8160799803c6d2be729c59f5311a72b268[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Fri Oct 13 14:57:18 2017 +0300
+
+    seperate layout from worker
+
+[33mcommit 1a43347bd58f1eb1c042e7ae489e9d31fb97c737[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Thu Oct 12 23:19:39 2017 +0300
+
+    Dynamically adding addresses, validation from file
+
+[33mcommit a632b14fa9ed6277aebf14ea9c864f702f61a52e[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Oct 10 17:16:49 2017 +0300
+
+    Dynamically adding addresses
+
+[33mcommit 99b491a051fa4e29fec032189291e6f802bcc16b[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Tue Oct 10 01:41:41 2017 +0300
+
+    Dynamic elements
+
+[33mcommit 7abcf04d193559067dba34e9c6739d597fea2500[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Mon Oct 9 00:15:28 2017 +0300
+
+    add debounceTime to Observable
+
+[33mcommit bd0097ea67c531d57dcc3d0348c466f3cb9517c7[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 8 00:42:13 2017 +0300
+
+    viewChanges
+
+[33mcommit 028b0418c02a7c17d952c190caa9a7053aaba0ea[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Sat Oct 7 17:17:46 2017 +0300
+
+    added email confirmation
+
+[33mcommit d22f3fb1b0ac45059409ec150d18fbe0ef3f818b[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sat Oct 7 01:48:10 2017 +0300
+
+    custom validator with parameters
+
+[33mcommit 51921a30b1ef6ad4f2395d44407a5410ee2e0060[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Wed Oct 4 11:07:07 2017 +0300
+
+    Dynamic components
+
+[33mcommit 21bda375c6cf5f195d51a6426bbe050d010ca49b[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Wed Oct 4 09:37:52 2017 +0300
+
+    Dynamic components
+
+[33mcommit a2a1460d743bdb75116022e75d4c8634bf29172c[m
+Author: Udi Mazor <udimaz@gmail.com>
+Date:   Tue Oct 3 10:12:47 2017 +0300
+
+    ad-host
+
+[33mcommit efc41e2329db816f96a02b4941262d30700f802b[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sun Oct 1 22:59:47 2017 +0300
+
+    changing validators
+
+[33mcommit 2e9ccf0ff6c9567d24c71b8a54afafbe4121938f[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Wed Sep 27 00:03:50 2017 +0300
+
+    form
+
+[33mcommit a0d4bd61602623069a02396ff8ec8dd0e4a66103[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Sat Sep 23 23:34:08 2017 +0300
+
+    worker component
+
+[33mcommit 3a65e3a7bae8d352a00521f5c04bdbba2de057a7[m
+Author: udi101 <udimaz@gmail.com>
+Date:   Thu Sep 21 19:32:34 2017 +0300
+
+    first commit
+
+[33mcommit aae6b9693b204d0768431ea5face8caed48656cc[m
+Author: Angular CLI <angular-cli@angular.io>
+Date:   Thu Sep 21 19:25:53 2017 +0300
+
+    chore: initial commit from @angular/cli

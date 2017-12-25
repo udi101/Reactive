@@ -1,11 +1,19 @@
 import { Injectable, Inject } from '@angular/core';
+
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { IStudent } from './interfaces/student.interface';
 
 @Injectable()
 export class SchoolService {
+    ttr = new BehaviorSubject<string>('udi');
+    $ttr = this.ttr.asObservable();
+
+    changeName(name: string) {this.ttr.next(name); }
+
     getStudents(): Array<IStudent> {
         return studentList;
     }
+
     insertStudent(student: IStudent) {
         studentList = studentList.concat(student);
     }
