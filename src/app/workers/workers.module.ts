@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { HttpModule, Http } from '@angular/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SharedModule } from './../shared/shared.module';
 import { MatTableModule, MatButtonModule, MatToolbarModule, MatMenuModule, MatInputModule, MatRadioModule } from '@angular/material';
@@ -25,7 +25,7 @@ import { TestComponent } from './test/test.component';
         CommonModule,
         SharedModule,
         ReactiveFormsModule,
-        HttpModule,
+        HttpClientModule,
         MatTableModule,
         MatButtonModule,
         MatToolbarModule,
@@ -42,7 +42,7 @@ import { TestComponent } from './test/test.component';
     exports: [],
     declarations: [ListComponent, OrderbyPipe, AddWorkerComponent, AddAddressesComponent, CheckboxComponent, TestComponent],
     providers: [
-        { provide: WorkersService, useFactory: workersServiceFactory, deps: [Http] },
+        { provide: WorkersService, useFactory: workersServiceFactory, deps: [HttpClient] },
         WorkersGuard]
 })
 export class WorkersModule {

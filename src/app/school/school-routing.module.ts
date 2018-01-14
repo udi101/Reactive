@@ -9,7 +9,7 @@ import { schoolRoutes } from './school.routing';
     CommonModule,
     RouterModule.forChild(schoolRoutes)
   ],
-  exports: [RouterModule],
+  exports: [],
   declarations: []
 })
 export class SchoolRoutingModule { }

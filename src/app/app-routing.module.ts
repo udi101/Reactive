@@ -9,6 +9,7 @@ import { ToolboxComponent } from './toolbox/toolbox.component';
             { path: 'workers', component: WorkerComponent, loadChildren: './workers/workers.module#WorkersModule' },
             { path: 'toolbox', component: ToolboxComponent, loadChildren: './toolbox/toolbox.module#ToolboxModule' },
             { path: 'animations', loadChildren: './animations/animations.module#AnimationsModule' },
+            {path: 'httpclient', loadChildren: './httpclient/httpclient.module#HttpclientModule'},
             {path: 'school', loadChildren: './school/school.module#SchoolModule'}
         ])
     ],
@@ -17,5 +18,4 @@ import { ToolboxComponent } from './toolbox/toolbox.component';
     providers: []
 })
 export class AppRoutingModule {
-
 }

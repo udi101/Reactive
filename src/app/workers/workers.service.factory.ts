@@ -1,7 +1,7 @@
 import { WorkersService } from './workers.service';
-import { Http } from '@angular/http';
-export function workersServiceFactory(http: Http) {
-    const workersService: WorkersService = new WorkersService(http);
+import { HttpClient  } from '@angular/common/http';
+export function workersServiceFactory(httpClient: HttpClient) {
+    const workersService: WorkersService = new WorkersService(httpClient);
     console.log('Dependancy Injection was done.');
     return workersService;
 }

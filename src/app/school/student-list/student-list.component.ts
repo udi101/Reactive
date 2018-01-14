@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SchoolService } from './../school.service';
 import { IStudent } from './../interfaces/student.interface';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { transformMenu } from '@angular/material/menu/typings/menu-animations';
 import { divClick } from './student-list.animations';
 
 @Component({

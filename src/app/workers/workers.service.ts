@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { IWorker } from './worker.interface';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -11,11 +11,12 @@ export class WorkersService {
     workers: Subject<Array<IWorker>> = new Subject<Array<IWorker>>();
     workers$ = this.workers.asObservable();
 
-    constructor(private http: Http) { }
+    constructor(private http: HttpClient) { }
 
 
     readWorkers() {
-        return(this.http.get('assets/workers.json').map(response => <Array<IWorker>>response.json()));
+        return this.http.get<Array<IWorker>>('http://localhost:49706/api/workers');
+        // return(this.http.get<Array<IWorker>>('assets/workers.json').map(workers => workers));
     }
 
 }
