@@ -24,6 +24,12 @@
     <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
     <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
   </mat-menu>
+  <button mat-button [matMenuTriggerFor]="httpClient">httpClient</button>
+  <mat-menu [overlapTrigger]="false" #httpClient="matMenu">
+    <button role="link" mat-menu-item routerLink="/httpclient/posts">Posts</button>
+    <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
+    <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
+  </mat-menu>
 </div>
 <div class="container-fluid">
 <router-outlet></router-outlet>

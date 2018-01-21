@@ -7,7 +7,7 @@ import { PostsComponent } from './posts/posts.component';
     imports: [
         RouterModule.forChild([{
             path: '', children: [
-                { path: 'posts', component: PostsComponent }
+                { path: 'posts', component: PostsComponent, data: { name: 'udi' } }
             ]
         }])
     ],
@@ -18,15 +18,3 @@ import { PostsComponent } from './posts/posts.component';
 export class HttpclientRoutingModule {
 
 }
-
-// import { NgModule } from '@angular/core';
-
-// import { NameComponent } from './name.component';
-
-// @NgModule({
-//     imports: [],
-//     exports: [],
-//     declarations: [NameComponent],
-//     providers: [],
-// })
-// export class NameModule { }
