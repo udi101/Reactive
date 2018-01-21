@@ -33,7 +33,6 @@ export class StudentListComponent implements OnInit {
 
   setName(name: string) {
     this.ttr = name;
-    // this.changeName(name);
   }
   changeName(name: string) {
     this.schoolService.changeName(name);
