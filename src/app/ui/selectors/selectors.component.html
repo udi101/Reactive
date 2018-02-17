@@ -1,0 +1,15 @@
+<h4>Selectors</h4>
+Selecting viewChildren and contentChildren and using selectors.
+<br><br>
+<button (click)="toggleShowCounters()">Show counters</button>
+
+<ng-template #view1>This is view 1</ng-template>
+<ng-template #view2>This is view 2</ng-template>
+<ng-template #view3>This is view 3</ng-template>
+
+<div *ngIf="showCounters">
+There are {{allViews?.length}} views <br> 
+There are {{allContent?.length}} contents <br>
+There are {{selectedViews.length}} selected views
+</div>
+

@@ -1,0 +1,9 @@
+<h4>Child</h4>
+<ng-template #view>
+  This is view - it will be catched by the child component using <strong>viewChild</strong>.
+</ng-template>
+
+<ng-container *ngTemplateOutlet="liveTemplate"></ng-container>
+<div style="display: flex">
+<button mat-button (click)="toggleView()">Toggle View</button>
+</div>
