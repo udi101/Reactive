@@ -6,6 +6,10 @@ import { UiChildComponent } from './child/ui-child.component';
 import { UiFatherComponent } from './father/ui-father.component';
 import { SelectorsComponent } from './selectors/selectors.component';
 import { ViewContainerComponent } from './view-container/view-container.component';
+import { HostListenerComponent } from './host-listener/host-listener.component';
+import { ClassSelectorDirective } from './directives/selector.directive';
+import { DirectiveComponent } from './directives/directive.component';
+import { RedDirective } from './directives/red.directive';
 
 @NgModule({
   imports: [
@@ -16,7 +20,11 @@ import { ViewContainerComponent } from './view-container/view-container.componen
     UiFatherComponent,
     UiChildComponent,
     SelectorsComponent,
-    ViewContainerComponent
+    ViewContainerComponent,
+    HostListenerComponent,
+    ClassSelectorDirective,
+    DirectiveComponent,
+    RedDirective
   ]
 })
 export class UiModule { }

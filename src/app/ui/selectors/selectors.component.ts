@@ -17,7 +17,7 @@ export class SelectorsComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleShowCounters() {
-    this.showCounters = !this.showCounters;
-  }
+toggleShowCounters() {
+  this.showCounters = !this.showCounters;
+}
 }

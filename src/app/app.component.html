@@ -30,6 +30,12 @@
     <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
     <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
   </mat-menu>
+  <button mat-button [matMenuTriggerFor]="httpClient">UI</button>
+  <mat-menu [overlapTrigger]="false" #httpClient="matMenu">
+    <button role="link" mat-menu-item routerLink="/ui/father">Father</button>
+    <button role="link" mat-menu-item routerLink="/ui/viewContainer">viewContainer</button>
+    <button role="link" mat-menu-item routerLink="/ui/directives">Directives selectors</button>
+  </mat-menu>
 </div>
 <div class="container-fluid">
 <router-outlet></router-outlet>
