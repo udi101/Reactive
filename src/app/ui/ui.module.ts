@@ -10,6 +10,7 @@ import { HostListenerComponent } from './host-listener/host-listener.component';
 import { ClassSelectorDirective } from './directives/selector.directive';
 import { DirectiveComponent } from './directives/directive.component';
 import { RedDirective } from './directives/red.directive';
+import { RandomColorDirective } from './hostbinding/random-color.directive';
 
 @NgModule({
   imports: [
@@ -24,7 +25,8 @@ import { RedDirective } from './directives/red.directive';
     HostListenerComponent,
     ClassSelectorDirective,
     DirectiveComponent,
-    RedDirective
+    RedDirective,
+    RandomColorDirective
   ]
 })
 export class UiModule { }
