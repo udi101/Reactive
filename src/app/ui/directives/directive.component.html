@@ -2,4 +2,21 @@
 <div red>I have red attribute, I am setting new attributes using Renderer2</div>
 <br>
 <h4>Host binding</h4>
-<div randomColor>This is ransom color host biding that binds to style.color</div>
+<div randomColor>This is radsom color host biding that binds to style.color</div>
+
+
+<div setActive="true">This is set-active directive</div>
+
+<input setValue="Udi Mazor"  type="text">
+<hr class="border">
+
+<h4>Host-listeners</h4>
+<div class="clickListener" clickListener [listener]="handleClick">Click Zone</div>
+This is a div that has a directive with hostListener for clicking event.
+<hr class="border">
+
+<h4>Renderer 2</h4> 
+<button class="btn btn-sm btn-primary" (click)="addLink($event)">Add a Link</button>
+<button class = "btn btn-sm" (click)="selectRootElement($event)">Select Root Element</button>
+
+This is getting the element but clearing its inners. Angular bug??

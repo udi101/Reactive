@@ -10,7 +10,11 @@ import { HostListenerComponent } from './host-listener/host-listener.component';
 import { ClassSelectorDirective } from './directives/selector.directive';
 import { DirectiveComponent } from './directives/directive.component';
 import { RedDirective } from './directives/red.directive';
-import { RandomColorDirective } from './hostbinding/random-color.directive';
+import { RandomColorDirective } from './host-binding/random-color.directive';
+import { SetActiveDirective } from './host-binding/set-active.directive';
+import { SetValueDirective } from './host-binding/set-value.directive';
+import { ClickListenerDirective } from './host-listener/click-listener.directive';
+import { DynamicComponent } from './dynamic/dynamic.component';
 
 @NgModule({
   imports: [
@@ -26,7 +30,11 @@ import { RandomColorDirective } from './hostbinding/random-color.directive';
     ClassSelectorDirective,
     DirectiveComponent,
     RedDirective,
-    RandomColorDirective
+    RandomColorDirective,
+    SetActiveDirective,
+    SetValueDirective,
+    ClickListenerDirective,
+    DynamicComponent
   ]
 })
 export class UiModule { }

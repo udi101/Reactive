@@ -9,7 +9,7 @@ export class RedDirective implements OnInit {
   constructor(private elementRef: ElementRef, private renderer2: Renderer2) {
   }
   ngOnInit() {
-    this.renderer2.addClass(this.elementRef.nativeElement, 'artium');
+    this.renderer2.addClass(this.elementRef.nativeElement, 'tomato');
     this.renderer2.setAttribute(this.elementRef.nativeElement, 'value', '15');
   }
 }

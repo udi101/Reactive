@@ -13,9 +13,10 @@ export class RandomColorDirective implements OnInit, AfterViewInit {
     this.renderer2.setStyle(this.el.nativeElement, 'textDecoration', 'underline');
   }
   ngAfterViewInit(): void {
-    setInterval(() => {
+    const int = setInterval(() => {
       this.color = this.getrandomcolor();
-    }, 1000);
+    }, 360);
+    setTimeout(() => { clearInterval(int); }, 6000);
   }
 
   getrandomcolor(): string {

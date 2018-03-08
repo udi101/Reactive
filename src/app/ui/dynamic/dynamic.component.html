@@ -1,0 +1,14 @@
+<h4>No Context</h4>
+<ng-container *ngTemplateOutlet="noContext"></ng-container>
+<hr>
+
+<h4>Fixed Content</h4>
+<ng-container *ngTemplateOutlet="fixedContext; context: {ttr:'tt600r'}"></ng-container>
+<hr>
+
+<h4>Dynamic Content</h4>
+<ng-container *ngTemplateOutlet="template"></ng-container>
+
+
+<ng-template #noContext>This template is injected as is</ng-template>
+<ng-template #fixedContext let-ttr="ttr">This template is injected with fixed content. My motorbike is {{ttr}}</ng-template>
