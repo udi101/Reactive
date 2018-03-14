@@ -1,0 +1,12 @@
+<div style="display: flex; flex-flow: column nowrap; justify-content: space-between; height : 100%">
+  <div style="display: flex; flex-flow: row wrap">
+    <mat-form-field>
+      <input matInput type="text" #myName placeholder="set a value">
+    </mat-form-field>
+    <button mat-button (click)="changeService()">Send to service</button>
+  </div>
+
+  <div style="display: flex; justify-content: flex-end">
+    <button mat-raised-button color="primary" (click)="closeDialog()">Close Dialog</button>
+  </div>
+</div>

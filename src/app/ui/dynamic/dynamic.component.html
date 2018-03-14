@@ -7,8 +7,15 @@
 <hr>
 
 <h4>Dynamic Content</h4>
-<ng-container *ngTemplateOutlet="template"></ng-container>
-
-
+<ng-container *ngTemplateOutlet="dynamicContent; context:{ bike:'Dealim', $implicit:'KLR650A'}"></ng-container>
+<br>
 <ng-template #noContext>This template is injected as is</ng-template>
 <ng-template #fixedContext let-ttr="ttr">This template is injected with fixed content. My motorbike is {{ttr}}</ng-template>
+<ng-template #dynamicContent let-default let-motorbike="bike">this is Dynamic template. My current bike is: {{motorbike}} and {{default}}</ng-template>
+
+
+<button mat-raised-button color="primary" (click)="openDialog()">Open Dialog</button>
+<button mat-button (click)="changeService()">change value</button>
+<mat-form-field>
+  <input #myName matInput type="text">
+</mat-form-field>

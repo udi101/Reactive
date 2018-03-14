@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { SharedModule } from './../shared/shared.module';
 import { UiRoutingModule } from './ui-routing.module';
 import { UiChildComponent } from './child/ui-child.component';
 import { UiFatherComponent } from './father/ui-father.component';
@@ -15,10 +16,13 @@ import { SetActiveDirective } from './host-binding/set-active.directive';
 import { SetValueDirective } from './host-binding/set-value.directive';
 import { ClickListenerDirective } from './host-listener/click-listener.directive';
 import { DynamicComponent } from './dynamic/dynamic.component';
+import { ApprovalDialogComponent } from './dialogs/approval-dialog.component';
+import { UiService } from './ui.service';
 
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     UiRoutingModule
   ],
   declarations: [
@@ -34,7 +38,10 @@ import { DynamicComponent } from './dynamic/dynamic.component';
     SetActiveDirective,
     SetValueDirective,
     ClickListenerDirective,
-    DynamicComponent
-  ]
+    DynamicComponent,
+    ApprovalDialogComponent
+  ],
+  entryComponents: [ApprovalDialogComponent],
+  providers: [UiService]
 })
 export class UiModule { }
