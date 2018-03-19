@@ -10,6 +10,7 @@
       <mat-hint>Please insert the student last name</mat-hint>
       <mat-error>The student last name is required</mat-error>
     </mat-form-field>
+    <jsonInput formControlName="jsonControl"></jsonInput>
     <mat-form-field numberInput>
       <input matInput type="number" placeholder="Student's age" formControlName="age">
       <mat-error>The age is not in the valid range</mat-error>
@@ -28,3 +29,4 @@
     <button type="submit" (click)="addStudent()" mat-raised-button color="primary">Add Student</button>
   </form>
 </div>
+{{frmStudent.value | json}}

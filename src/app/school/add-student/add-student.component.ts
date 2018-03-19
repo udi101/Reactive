@@ -11,7 +11,7 @@ import { formControlBinding } from '@angular/forms/src/directives/ng_model';
 })
 export class AddStudentComponent implements OnInit {
   frmStudent: FormGroup;
-  get degrees(){
+  get degrees() {
     return <FormArray>this.frmStudent.get('degrees');
   }
 
@@ -25,7 +25,7 @@ export class AddStudentComponent implements OnInit {
   }
 
   addDegree() {
-     this.degrees.push(this.degreeBuilder());
+    this.degrees.push(this.degreeBuilder());
   }
 
   createStudentForm() {
@@ -34,6 +34,7 @@ export class AddStudentComponent implements OnInit {
         name: ['', Validators.required],
         last: ['', Validators.required],
         age: ['', [Validators.min(10), Validators.max(100)]],
+        jsonControl: '',
         degrees: <FormArray>this.formBuilder.array([this.degreeBuilder()])
       });
   }
