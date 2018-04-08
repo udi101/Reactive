@@ -17,7 +17,7 @@
       <mat-hint>Please Enter the student age</mat-hint>
     </mat-form-field>
     <ng-container formArrayName="degrees" style="display: flex; flex-flow: row wrap">
-      <div *ngFor="let d of frmStudent.get('degrees').controls; let i = index" style="display: flex; justify-content: space-between">
+      <div *ngFor="let d of degrees; let i = index" style="display: flex; justify-content: space-between">
       <mat-form-field style="flex:1 0">
         <input matInput type="text" [formControlName]="i" placeholder="Degree">
         <mat-hint>Insert the student's degree</mat-hint>

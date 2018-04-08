@@ -12,7 +12,8 @@ import { formControlBinding } from '@angular/forms/src/directives/ng_model';
 export class AddStudentComponent implements OnInit {
   frmStudent: FormGroup;
   get degrees() {
-    return <FormArray>this.frmStudent.get('degrees');
+    const tt: FormArray = <FormArray>this.frmStudent.get('degrees');
+    return tt.controls;
   }
 
   constructor(private formBuilder: FormBuilder) { }

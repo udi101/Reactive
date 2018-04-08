@@ -1,16 +1,18 @@
-<h4>No Context</h4>
+<h4 class="title">*ngTemplateOutlet with context and dynamic contect</h4>
+
 <ng-container *ngTemplateOutlet="noContext"></ng-container>
 <hr>
 
 <h4>Fixed Content</h4>
-<ng-container *ngTemplateOutlet="fixedContext; context: {ttr:'tt600r'}"></ng-container>
+<ng-container *ngTemplateOutlet="fixedContext; context: {ttr:'TT600R'}"></ng-container>
 <hr>
 
 <h4>Dynamic Content</h4>
-<ng-container *ngTemplateOutlet="dynamicContent; context:{ bike:'Dealim', $implicit:'KLR650A'}"></ng-container>
+<ng-container *ngTemplateOutlet="dynamicContent; context:getContext() "></ng-container>
 <br>
+
 <ng-template #noContext>This template is injected as is</ng-template>
-<ng-template #fixedContext let-ttr="ttr">This template is injected with fixed content. My motorbike is {{ttr}}</ng-template>
+<ng-template #fixedContext let-myBike="ttr">This template is injected with fixed content. My motorbike is {{myBike}}</ng-template>
 <ng-template #dynamicContent let-default let-motorbike="bike">this is Dynamic template. My current bike is: {{motorbike}} and {{default}}</ng-template>
 
 

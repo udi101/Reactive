@@ -30,6 +30,9 @@ export class DynamicComponent implements OnInit {
     dialogRef.afterClosed().subscribe(x => { console.log(x); });
     // this.app.tick();
   }
+  getContext() {
+    return { bike: 'KLR650A', $implicit: 'This is implicit contect that is returned dynamically' };
+  }
 
   changeService() {
     this.uiService.tt$.next('udi');

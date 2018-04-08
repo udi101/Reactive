@@ -9,8 +9,7 @@ import { clickerTrigger, numberEnteredStateTrigger } from './simple.animations';
 })
 export class SimpleComponent implements OnInit {
   state: string;
-  numberEntered() {
-  }
+  numberEntered = 0;
   constructor() { }
 
   ngOnInit() {
