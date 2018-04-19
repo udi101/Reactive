@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, Renderer2, ApplicationRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, Renderer2, ApplicationRef, TemplateRef, ViewContainerRef } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { ApprovalDialogComponent } from '../dialogs/approval-dialog.component';
@@ -11,6 +11,8 @@ import { UiService } from './../ui.service';
 export class DynamicComponent implements OnInit {
 
   @ViewChild('myName') name: ElementRef;
+  @ViewChild('ttr', { read: TemplateRef }) ttr;
+  @ViewChild('ttr', { read: ViewContainerRef }) ttrContainer;
   constructor(
     private dialog: MatDialog,
     private uiService: UiService,
@@ -37,4 +39,8 @@ export class DynamicComponent implements OnInit {
   changeService() {
     this.uiService.tt$.next('udi');
   }
+  toggleTemplate(): TemplateRef<any> {
+    return this.ttr;
+  }
+
 }

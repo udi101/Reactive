@@ -18,6 +18,7 @@ import { ClickListenerDirective } from './host-listener/click-listener.directive
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { ApprovalDialogComponent } from './dialogs/approval-dialog.component';
 import { UiService } from './ui.service';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 @NgModule({
   imports: [
@@ -39,7 +40,8 @@ import { UiService } from './ui.service';
     SetValueDirective,
     ClickListenerDirective,
     DynamicComponent,
-    ApprovalDialogComponent
+    ApprovalDialogComponent,
+    NgForComponent
   ],
   entryComponents: [ApprovalDialogComponent],
   providers: [UiService]

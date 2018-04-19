@@ -6,13 +6,15 @@ import { UiChildComponent } from './child/ui-child.component';
 import { ViewContainerComponent } from './view-container/view-container.component';
 import { DirectiveComponent } from './directives/directive.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
+import { NgForComponent } from './ng-for/ng-for.component';
 
 const routes: Routes = [{
   path: '', children: [
     { path: 'father', component: UiFatherComponent },
     { path: 'viewContainer', component: ViewContainerComponent },
     { path: 'directives', component: DirectiveComponent },
-    { path: 'dynamic', component: DynamicComponent }
+    { path: 'dynamic', component: DynamicComponent },
+    { path: 'ngFor', component: NgForComponent }
   ]
 }];
 
