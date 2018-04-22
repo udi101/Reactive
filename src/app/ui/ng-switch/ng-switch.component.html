@@ -1,0 +1,28 @@
+<p>
+  ng-switch works!
+</p>
+
+
+<ng-container *ngTemplateOutlet="getTemplate()"></ng-container>
+
+
+<button mat-raised-button color="primary" (click)="toggleButton()">toggle templates</button>
+
+
+
+
+<!--  ==== Templates ======= -->
+<ng-template #1>
+  <h4>Welcome to template no. 1</h4>
+  <div>This is template number 1.</div>
+</ng-template>
+
+<ng-template #2>
+  <h4>Welcome to template no. 2</h4>
+  <div>This is template number 2.</div>
+</ng-template>
+
+<ng-template #3>
+  <h4>Welcome to templat eno. 3</h4>
+  <div>This is template number 3.</div>
+</ng-template>

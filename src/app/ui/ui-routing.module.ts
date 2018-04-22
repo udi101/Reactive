@@ -7,6 +7,7 @@ import { ViewContainerComponent } from './view-container/view-container.componen
 import { DirectiveComponent } from './directives/directive.component';
 import { DynamicComponent } from './dynamic/dynamic.component';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 const routes: Routes = [{
   path: '', children: [
@@ -14,7 +15,8 @@ const routes: Routes = [{
     { path: 'viewContainer', component: ViewContainerComponent },
     { path: 'directives', component: DirectiveComponent },
     { path: 'dynamic', component: DynamicComponent },
-    { path: 'ngFor', component: NgForComponent }
+    { path: 'ngFor', component: NgForComponent },
+    { path: 'ngSwitch', component: NgSwitchComponent }
   ]
 }];
 

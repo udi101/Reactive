@@ -19,6 +19,7 @@ import { DynamicComponent } from './dynamic/dynamic.component';
 import { ApprovalDialogComponent } from './dialogs/approval-dialog.component';
 import { UiService } from './ui.service';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 @NgModule({
   imports: [
@@ -41,7 +42,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     ClickListenerDirective,
     DynamicComponent,
     ApprovalDialogComponent,
-    NgForComponent
+    NgForComponent,
+    NgSwitchComponent
   ],
   entryComponents: [ApprovalDialogComponent],
   providers: [UiService]
