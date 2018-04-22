@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
-
+import { Memoize } from 'lodash-decorators';
+import { Observable } from 'rxjs/Observable';
 @Component({
   selector: 'app-ng-for',
   templateUrl: './ng-for.component.html',
@@ -8,6 +9,7 @@ import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit }
 export class NgForComponent implements OnInit, AfterViewInit {
   students: Array<{ id: number, name: string }> = [];
   @ViewChildren('student') studentList: QueryList<ElementRef>;
+  serverValue = '';
   constructor() { }
 
   ngOnInit() {
@@ -41,5 +43,21 @@ export class NgForComponent implements OnInit, AfterViewInit {
 
   getId(id: number, item: any) {
     return item.id;
+  }
+
+  // @Memoize()
+  getValue() {
+    this.getFromServer().subscribe((val) => { this.serverValue = val; });
+  }
+
+  getFromServer(): Observable<string> {
+    return Observable.create(observer => {
+      setTimeout(() => {
+        const newVal = 'value is: ' + (Math.floor(Math.random() * 100) + 1);
+        console.log('Getting value from the server...' + newVal);
+        observer.next(newVal);
+      }, 100);
+    });
+
   }
 }

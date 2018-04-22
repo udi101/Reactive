@@ -2,6 +2,7 @@
 <p>This is a better *ngFor. 1 list is using trackBy and the other is not. just look at the source at the F12.<br>
 This is very usefull when building lists from http calls.</p>
 <p>QueryLists enable us to hook to viewChildren</p>
+<p>Add/Remove the memoize function to see</p>
 <button mat-raised-button color="primary" (click)="updateList()">Add Item</button>
 
 <div style="display: flex; justify-content: flex-start">
@@ -13,3 +14,8 @@ This is very usefull when building lists from http calls.</p>
   </div>
 </div>
 
+
+
+<hr>
+<p>Value is: {{serverValue}}</p>
+<button mat-raised-button (click)="getValue()">get value from server</button>
