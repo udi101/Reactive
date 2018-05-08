@@ -27,19 +27,22 @@
   <button mat-button [matMenuTriggerFor]="httpClient">httpClient</button>
   <mat-menu [overlapTrigger]="false" #httpClient="matMenu">
     <button role="link" mat-menu-item routerLink="/httpclient/posts">Posts</button>
-    <button role="link" mat-menu-item routerLink="/animations/simple">simple</button>
-    <button role="link" mat-menu-item routerLink="/animations/query">Query</button>
   </mat-menu>
-  <button mat-button [matMenuTriggerFor]="httpClient">UI</button>
-  <mat-menu [overlapTrigger]="false" #httpClient="matMenu">
+  <button mat-button [matMenuTriggerFor]="UI">UI</button>
+  <mat-menu [overlapTrigger]="false" #UI="matMenu">
     <button role="link" mat-menu-item routerLink="/ui/father">Father</button>
     <button role="link" mat-menu-item routerLink="/ui/viewContainer">viewContainer</button>
     <button role="link" mat-menu-item routerLink="/ui/directives">Directives selectors</button>
     <button role="link" mat-menu-item routerLink="/ui/dynamic">Dynamic UI</button>
     <button role="link" mat-menu-item routerLink="/ui/ngFor">ngFor trackBy</button>
     <button role="link" mat-menu-item routerLink="/ui/ngSwitch">ngSwitch improved</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="communication">Communication</button>
+  <mat-menu [overlapTrigger]="false" #communication="matMenu">
+    <button role="link" mat-menu-item routerLink="/communication">Communication</button>
 
   </mat-menu>
+
 </div>
 <div class="container-fluid">
 <router-outlet></router-outlet>
