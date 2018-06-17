@@ -38,4 +38,4 @@ export const numberEnteredStateTrigger =
         transition('selected => unSelected', [
             animate('200ms linear')
         ])
-    ])
+    ]);

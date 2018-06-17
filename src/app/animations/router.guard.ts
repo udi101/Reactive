@@ -7,11 +7,7 @@ import { CssAnimationsComponent } from './css-animations/css-animations.componen
 
 @Injectable()
 export class ExitCss implements CanDeactivate<CssAnimationsComponent> {
-    canDeactivate(
-        component: CssAnimationsComponent,
-        currentRoute: ActivatedRouteSnapshot,
-        currentState: RouterStateSnapshot
-    ): Observable<boolean>|Promise<boolean>|boolean {
+    canDeactivate(): boolean {
         return confirm('Are you sure you want to leave this page?');
     }
 }

@@ -11,10 +11,12 @@ export class BananaboxComponent implements OnInit {
   @Output()
   counterChange = new EventEmitter();
 
-  @Input()
+
   get counter() {
     return this.counterValue;
   }
+  
+  @Input()
   set counter(val) {
     this.counterValue = val;
     this.counterChange.emit(this.counterValue);
