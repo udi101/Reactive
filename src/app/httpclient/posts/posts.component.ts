@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostsService } from './../posts.service';
+import { tap } from 'rxjs/operators';
+
 @Component({
   selector: 'app-posts',
   templateUrl: './posts.component.html',
@@ -16,7 +18,10 @@ export class PostsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.postsService.getPosts().subscribe((posts: Array<{ name: string, username: string }>) => { this.posts = posts; });
+      this.postsService.getPosts()
+        .pipe(
+          tap((data) => { console.log(data); }))
+        .subscribe((posts: Array<{ name: string, username: string }>) => { this.posts = posts; });
     this.ar.data.subscribe((x: any) => {
       this.name = x.name;
     });

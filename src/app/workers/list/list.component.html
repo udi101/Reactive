@@ -11,6 +11,7 @@
         <thead>
           <th>First name</th>
           <th>Last name</th>
+          <th>Age</th>
           <th>Salary</th>
           <th>Email</th>
           <th>Birth date</th>
@@ -22,12 +23,13 @@
           <tr *ngFor="let worker of workers | orderBy : 'firstName'; let odd=odd" [class.odd]="odd">
             <td>{{worker?.firstName}}</td>
             <td>{{worker?.lastName}}</td>
-            <td>₪ {{worker?.salary | number}}</td>
+            <td>{{worker?.age}}</td>
+            <td>₪ {{worker?.Salary | number}}</td>
             <td>{{worker?.email}}</td>
             <td>{{worker?.birthDate| date:'dd/MM/yyyy'}}</td>
-            <td>{{worker.address.city}}</td>
-            <td>{{worker.address.building}}</td>
-            <td>{{worker.address.country}}</td>
+            <td>{{worker.address?.city}}</td>
+            <td>{{worker.address?.building}}</td>
+            <td>{{worker.address?.country}}</td>
           </tr>
         </tbody>
       </table>

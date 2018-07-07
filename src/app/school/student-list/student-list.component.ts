@@ -21,6 +21,7 @@ export class StudentListComponent implements OnInit {
   constructor(public schoolService: SchoolService) { }
 
   ngOnInit() {
+    
     this.studentsList = this.getStudents();
     this.schoolService.ttr.subscribe(ttr => this._ttr = ttr);
     this.date = new Date(Date.now());

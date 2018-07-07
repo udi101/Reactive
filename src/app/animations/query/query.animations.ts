@@ -1,4 +1,4 @@
-import { trigger, style, state, transition, animate, group } from '@angular/animations';
+import { trigger, style, state, transition, animate, group, keyframes } from '@angular/animations';
 
 export const queryAnimation = trigger('shark', [
     state('first', style({
@@ -18,7 +18,20 @@ export const lstAnimation = trigger('lstAnimation', [
         group([
             animate('700ms', style({ width: '*' })),
             animate('300ms', style({ opacity: 1 })),
-            animate('900ms', style({ color: 'black' }))
+            animate('900ms', keyframes([
+                style({
+                    color: 'red',
+                    offset: 0.2
+                }),
+                style({
+                    color: 'blue',
+                    offset: 0.8
+                }),
+                style({
+                    color: 'black',
+                    offset: 1
+                })
+            ]))
         ])
     ])
 ]);

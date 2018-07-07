@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { IWorker } from './worker.interface';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
+import { map, catchError, tap } from 'rxjs/operators';
+import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
+import { Observable } from 'rxjs/observable';
 
 
 @Injectable()
@@ -15,26 +16,21 @@ export class WorkersService {
 
 
     readWorkers() {
-        return this.http.get<Array<IWorker>>('http://localhost:49706/api/workers');
-        // return(this.http.get<Array<IWorker>>('assets/workers.json').map(workers => workers));
+        // const headers: HttpHeaders = new HttpHeaders({ status: 'test' });
+        return this.http.get<Array<any>>('http://localhost:5000/api/workers').pipe(
+            map(x => {
+                const result: Array<IWorker> = [];
+                x.forEach((en) => { result.push({ firstName: en.Name, lastName: en.LastName }); });
+                return result;
+            }),
+            tap((d) => { console.log(d); }),
+        );
+    }
+
+    handleError(err: HttpErrorResponse): Observable<HttpErrorResponse> {
+        return ErrorObservable.create(err);
     }
 
 }
-
-
-// const workers: Array<IWorker> = [
-//     {
-//         firstName: 'Udi', lastName: 'Mazor', salary: 25000, birthDate: new Date('1974-08-28 12:00:00'),
-//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
-//     },
-//     {
-//         firstName: 'Mazal', lastName: 'Mazor', salary: 24000, birthDate: new Date('1985-04-04 12:00:00'),
-//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 105 }
-//     },
-//     {
-//         firstName: 'Liat', lastName: 'Levi', salary: 12000, birthDate: new Date('1995-08-12 12:00:00'),
-//         address: { country: 'Israel', city: 'Qiryat Ono', street: 'Levi Eshkol', building: 49 }
-//     }
-// ];
 
 

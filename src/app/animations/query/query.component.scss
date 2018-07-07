@@ -22,12 +22,32 @@ div.shark {
 .divResult {
   margin: 4px;
   padding: 4px;
-  flex:0 1 46%;
+  flex: 0 1 46%;
   background-color: lightgray;
   border-radius: 8px;
-  border:2px solid #2060a0;
+  border: 2px solid #2060a0;
+  font-weight: bold;
 }
 
 #btnToggle {
   margin-top: 8px;
+}
+
+@media screen and (max-width:600px) {
+  .divWorker {
+    width: 100%;
+  }
+  mat-form-field {
+    flex: 1 0 auto;
+  }
+}
+
+@media screen and (min-width:601px) {
+  .divWorker {
+    max-width: 500px;
+    width: 50%;
+  }
+  mat-form-field {
+    flex-grow: 1 1 auto;
+  }
 }

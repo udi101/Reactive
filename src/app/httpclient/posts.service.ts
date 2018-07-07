@@ -1,11 +1,17 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 @Injectable()
 export class PostsService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getPosts() {
-    return this.http.get('https://jsonplaceholder.typicode.com/users', { observe: 'body'});
+    const data = new FormData();
+    data.append('name', 'ef');
+    const headers: HttpHeaders = new HttpHeaders({
+      'Accept': 'application/json',
+      'Authorization': 'th4sa4ds53bsd3'
+    });
+    return this.httpClient.get('https://jsonplaceholder.typicode.com/users', { headers: headers });
   }
 }

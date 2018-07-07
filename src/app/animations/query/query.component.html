@@ -7,5 +7,18 @@
 <hr>
 <button id="btnToggle" color="primary" mat-raised-button (click)="addTestResult()">Add test result</button>
 <div style="display: flex; flex-flow: row wrap">
-  <div class="divResult" @lstAnimation *ngFor="let testResult of testResults">{{testResult}}</div>
+  <div class="divResult" @lstAnimation (@lstAnimation.start)="startAnimation($event)" (@lstAnimation.done)="endAnimation($event)"
+    *ngFor="let testResult of testResults">{{testResult}}</div>
 </div>
+
+<hr>
+<form [formGroup]="frmWorker" novalidate>
+  <div class="divWorker" style="display: flex; flex-flow: column wrap">
+    <mat-form-field>
+      <input type="text" matInput formControlName="firstName" placeholder="first name">
+    </mat-form-field>
+    <mat-form-field>
+      <input type="text" matInput formControlName="lastName" placeholder="last name">
+    </mat-form-field>
+  </div>
+</form>

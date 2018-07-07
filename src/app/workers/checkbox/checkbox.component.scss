@@ -1,5 +1,5 @@
-$checkbox: input[type="checkbox"];
-#{$checkbox} {
+input[type=checkbox]
+ {
   display: none;
   +.label-text:before {
     content: "\f096";

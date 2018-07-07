@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { QueryComponent } from './query/query.component';
 import { SharedModule } from './../shared/shared.module';
 import { RouterModule, CanDeactivate } from '@angular/router';
@@ -17,6 +19,7 @@ import { ChangeDetectionComponent } from './change-detection/change-detection.co
     CommonModule,
     MatTabsModule,
     SharedModule,
+    ReactiveFormsModule,
     RouterModule.forChild([
       {
         path: '', children: [
