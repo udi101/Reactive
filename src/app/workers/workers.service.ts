@@ -7,6 +7,7 @@ import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Observable } from 'rxjs/observable';
 
 
+
 @Injectable()
 export class WorkersService {
     workers: Subject<Array<IWorker>> = new Subject<Array<IWorker>>();
@@ -24,13 +25,13 @@ export class WorkersService {
                 return result;
             }),
             tap((d) => { console.log(d); }),
+            catchError(err => this.handleError(err))
         );
     }
 
     handleError(err: HttpErrorResponse): Observable<HttpErrorResponse> {
         return ErrorObservable.create(err);
     }
-
 }
 
 
