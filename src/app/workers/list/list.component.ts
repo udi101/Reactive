@@ -14,7 +14,9 @@ export class ListComponent implements OnInit {
 
   ngOnInit() {
     this.workersService.readWorkers().subscribe(
-      (data) => { this.workers = <Array<IWorker>>data; }
+      (data) => { this.workers = <Array<IWorker>>data; },
+      (err) => { console.log(err); },
+      () => { console.log('This is the end!'); }
     );
   }
 }

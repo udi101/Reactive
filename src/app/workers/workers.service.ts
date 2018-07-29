@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { IWorker } from './worker.interface';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Subject } from 'rxjs/Subject';
-import { map, catchError, tap } from 'rxjs/operators';
+import { map, catchError, tap, filter, switchMap, first, last, take } from 'rxjs/operators';
+import { of } from 'rxjs/';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 import { Observable } from 'rxjs/observable';
 
@@ -19,11 +20,8 @@ export class WorkersService {
     readWorkers() {
         // const headers: HttpHeaders = new HttpHeaders({ status: 'test' });
         return this.http.get<Array<any>>('http://localhost:5000/api/workers').pipe(
-            map(x => {
-                const result: Array<IWorker> = [];
-                x.forEach((en) => { result.push({ firstName: en.Name, lastName: en.LastName }); });
-                return result;
-            }),
+            filter(d => d.some(x => x.firstName === 'udi')),
+            switchMap(d => of(d)),
             tap((d) => { console.log(d); }),
             catchError(err => this.handleError(err))
         );
